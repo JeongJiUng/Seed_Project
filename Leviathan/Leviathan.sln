@@ -1,0 +1,83 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Leviathan", "Leviathan.vcxproj", "{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_Client|ARM = Debug_Client|ARM
+		Debug_Client|ARM64 = Debug_Client|ARM64
+		Debug_Client|x64 = Debug_Client|x64
+		Debug_Client|x86 = Debug_Client|x86
+		Debug_Server|ARM = Debug_Server|ARM
+		Debug_Server|ARM64 = Debug_Server|ARM64
+		Debug_Server|x64 = Debug_Server|x64
+		Debug_Server|x86 = Debug_Server|x86
+		Release_Client|ARM = Release_Client|ARM
+		Release_Client|ARM64 = Release_Client|ARM64
+		Release_Client|x64 = Release_Client|x64
+		Release_Client|x86 = Release_Client|x86
+		Release_Server|ARM = Release_Server|ARM
+		Release_Server|ARM64 = Release_Server|ARM64
+		Release_Server|x64 = Release_Server|x64
+		Release_Server|x86 = Release_Server|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Debug_Client|ARM.ActiveCfg = Debug_Client|ARM
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Debug_Client|ARM.Build.0 = Debug_Client|ARM
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Debug_Client|ARM.Deploy.0 = Debug_Client|ARM
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Debug_Client|ARM64.ActiveCfg = Debug_Client|ARM64
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Debug_Client|ARM64.Build.0 = Debug_Client|ARM64
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Debug_Client|ARM64.Deploy.0 = Debug_Client|ARM64
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Debug_Client|x64.ActiveCfg = Debug_Client|x64
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Debug_Client|x64.Build.0 = Debug_Client|x64
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Debug_Client|x64.Deploy.0 = Debug_Client|x64
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Debug_Client|x86.ActiveCfg = Debug_Client|x86
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Debug_Client|x86.Build.0 = Debug_Client|x86
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Debug_Client|x86.Deploy.0 = Debug_Client|x86
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Debug_Server|ARM.ActiveCfg = Debug_Server|ARM
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Debug_Server|ARM.Build.0 = Debug_Server|ARM
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Debug_Server|ARM.Deploy.0 = Debug_Server|ARM
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Debug_Server|ARM64.ActiveCfg = Debug_Server|ARM64
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Debug_Server|ARM64.Build.0 = Debug_Server|ARM64
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Debug_Server|ARM64.Deploy.0 = Debug_Server|ARM64
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Debug_Server|x64.ActiveCfg = Debug_Server|x64
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Debug_Server|x64.Build.0 = Debug_Server|x64
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Debug_Server|x64.Deploy.0 = Debug_Server|x64
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Debug_Server|x86.ActiveCfg = Debug_Server|x86
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Debug_Server|x86.Build.0 = Debug_Server|x86
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Debug_Server|x86.Deploy.0 = Debug_Server|x86
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Release_Client|ARM.ActiveCfg = Release_Client|ARM
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Release_Client|ARM.Build.0 = Release_Client|ARM
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Release_Client|ARM.Deploy.0 = Release_Client|ARM
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Release_Client|ARM64.ActiveCfg = Release_Client|ARM64
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Release_Client|ARM64.Build.0 = Release_Client|ARM64
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Release_Client|ARM64.Deploy.0 = Release_Client|ARM64
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Release_Client|x64.ActiveCfg = Release_Client|x64
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Release_Client|x64.Build.0 = Release_Client|x64
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Release_Client|x64.Deploy.0 = Release_Client|x64
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Release_Client|x86.ActiveCfg = Release_Client|x86
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Release_Client|x86.Build.0 = Release_Client|x86
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Release_Client|x86.Deploy.0 = Release_Client|x86
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Release_Server|ARM.ActiveCfg = Release_Server|ARM
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Release_Server|ARM.Build.0 = Release_Server|ARM
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Release_Server|ARM.Deploy.0 = Release_Server|ARM
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Release_Server|ARM64.ActiveCfg = Release_Server|ARM64
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Release_Server|ARM64.Build.0 = Release_Server|ARM64
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Release_Server|ARM64.Deploy.0 = Release_Server|ARM64
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Release_Server|x64.ActiveCfg = Release_Server|x64
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Release_Server|x64.Build.0 = Release_Server|x64
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Release_Server|x64.Deploy.0 = Release_Server|x64
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Release_Server|x86.ActiveCfg = Release_Server|x86
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Release_Server|x86.Build.0 = Release_Server|x86
+		{699DD6CA-A6FF-47B0-AA8B-99C7D91788A6}.Release_Server|x86.Deploy.0 = Release_Server|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DC3E98C7-9F40-4169-8E03-C986BB39BA8F}
+	EndGlobalSection
+EndGlobal

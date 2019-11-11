@@ -1,0 +1,3 @@
+OS : Ubuntu 14.04.3 LTS
+Complier : gcc 9.2, g++ 9.2
+Debuger : GNU gdb 7.7.1

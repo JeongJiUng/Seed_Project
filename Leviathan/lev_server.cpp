@@ -6,11 +6,6 @@ lev::cServer::cServer()
 	m_server_option.open_json_file(SERVER_OPTION);
 }
 
-lev::cServer::cServer(string _server_option_dir)
-{
-	m_server_option.open_json_file(_server_option_dir);
-}
-
 lev::cServer::~cServer()
 {
 	shutdown();
@@ -41,6 +36,11 @@ void lev::cServer::start()
 	}
 }
 
+void lev::cServer::loop()
+{
+
+}
+
 void lev::cServer::shutdown()
 {
 	cCloseSocket::get_instance()->close(m_fd);
@@ -54,35 +54,4 @@ void lev::cServer::set_fd(int _fd)
 int lev::cServer::get_fd()
 {
 	return m_fd;
-}
-
-lev::cLeviathanServer::cLeviathanServer(cServer* _server)
-{
-	m_server				= _server;
-}
-
-lev::cLeviathanServer::~cLeviathanServer()
-{
-	shutdown();
-}
-
-void lev::cLeviathanServer::run()
-{
-	//TODO:: Server setting
-
-	m_server->start();
-
-	cout << "#### SERVER START ####" << endl;
-}
-
-void lev::cLeviathanServer::shutdown()
-{
-	//TODO:: 서버종료전, 저장해야 할 데이터 저장후 종료.
-
-	m_server->shutdown();
-
-	if (m_server != NULL)
-		delete m_server;
-
-	cout << "#### SERVER SHUTDOWN ####" << endl;
 }

@@ -13,33 +13,6 @@
   "LISTEN_BACKLOG": 15,
 
   "EPOLL_MAX_EVENT_COUNT": 1024,
-  "EPOLL_TIME_OUT": -1,
-
-  // 1 -> enable, 0 -> disable
-  "EPOLL_SERVER_EVENTS": {
-    "EPOLLIN": 1,
-    "EPOLLOUT": 1,
-    "EPOLLPRI": 0,
-    "EPOLLRDHUP": 0,
-
-    "EPOLLERR": 1,
-    "EPOLLHUP": 0,
-
-    "EPOLLET": 1,
-    "EPOLLONESHOT": 0
-  },
-  "EPOLL_CLIENT_EVENTS": {
-    "EPOLLIN": 1,
-    "EPOLLOUT": 1,
-    "EPOLLPRI": 0,
-    "EPOLLRDHUP": 0,
-
-    "EPOLLERR": 1,
-    "EPOLLHUP": 0,
-
-    "EPOLLET": 1,
-    "EPOLLONESHOT": 0
-  },
 
   // Log File name and dir
   "ERROR_LOG_DIR": "./ERROR",

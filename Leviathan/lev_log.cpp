@@ -40,7 +40,7 @@ bool lev::cLog::write(string _key, const char* _data, ...)
 	strftime(write_date, 32, "[%H:%M:%S] :: ", pTm);
 	strftime(date, 32, "%Y-%m-%d-%H", pTm);
 
-	snprintf(file_name, PATH_MAX, "%s_%s.log", m_log_map[_key], date);
+	snprintf(file_name, PATH_MAX, "%s_%s.log", m_log_map[_key].c_str(), date);
 
 	va_list					ap;
 	va_start(ap, _data);

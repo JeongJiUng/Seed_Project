@@ -143,8 +143,10 @@
     <ClCompile Include="lev_json.cpp" />
     <ClCompile Include="lev_leviathan_server.cpp" />
     <ClCompile Include="lev_listen.cpp" />
+    <ClCompile Include="lev_log.cpp" />
     <ClCompile Include="lev_server.cpp" />
     <ClCompile Include="lev_server_adaptor.cpp" />
+    <ClCompile Include="lev_server_option.cpp" />
     <ClCompile Include="lev_socket.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -174,8 +176,10 @@
     <ClInclude Include="lev_json.h" />
     <ClInclude Include="lev_leviathan_server.h" />
     <ClInclude Include="lev_listen.h" />
+    <ClInclude Include="lev_log.h" />
     <ClInclude Include="lev_server.h" />
     <ClInclude Include="lev_server_adaptor.h" />
+    <ClInclude Include="lev_server_option.h" />
     <ClInclude Include="lev_singleton.h" />
     <ClInclude Include="lev_socket.h" />
   </ItemGroup>

@@ -23,8 +23,7 @@ bool lev::cJson::open_json_file(string _json_dir)
 	}
 	catch (Json::Exception const&)
 	{
-		// TODO:: PRINT LOG
-		printf("error\n");
+		printf("error json [%s]\n", _json_dir);
 		return FAIL;
 	}
 

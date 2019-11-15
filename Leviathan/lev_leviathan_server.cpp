@@ -13,6 +13,7 @@ lev::cLeviathanServer::~cLeviathanServer()
 void lev::cLeviathanServer::run()
 {
 	cout << "#### SERVER START ####" << endl;
+	cLog::get_instance()->write("LEV_INFO", "#### SERVER START ####");
 
 	m_server->start();
 	m_server->loop();
@@ -28,4 +29,5 @@ void lev::cLeviathanServer::shutdown()
 		delete m_server;
 
 	cout << "#### SERVER SHUTDOWN ####" << endl;
+	cLog::get_instance()->write("LEV_INFO", "#### SERVER SHUTDOWN ####");
 }

@@ -31,12 +31,6 @@
     <Filter Include="Leviathan\Network">
       <UniqueIdentifier>{a192af25-0cf3-465f-b278-b7830eba2e77}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Leviathan\Network\Socket">
-      <UniqueIdentifier>{866a2b5b-a695-4097-b35e-f342acc2747e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Leviathan\Network\ServerOption">
-      <UniqueIdentifier>{098fbad9-640c-4659-80fd-af7269993a70}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Leviathan\Network\LeviathanServer">
       <UniqueIdentifier>{642879db-e3b9-47a7-9908-7d23767120f2}</UniqueIdentifier>
     </Filter>
@@ -76,8 +70,20 @@
     <Filter Include="Leviathan\Network\LeviathanClient">
       <UniqueIdentifier>{9e52ccbd-fa7d-493d-a26a-6a562835b680}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Leviathan\Network\LeviathanServer\Client">
+    <Filter Include="Leviathan\Network\LeviathanClient\Client">
       <UniqueIdentifier>{2953f507-eadb-4b37-a582-de739192b328}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Leviathan\Network\LeviathanClient\Client\ClientManager">
+      <UniqueIdentifier>{78c8fa09-8ba5-4ef1-9700-01ea2a4d850c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Leviathan\Network\LeviathanServer\Server\Socket">
+      <UniqueIdentifier>{866a2b5b-a695-4097-b35e-f342acc2747e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Leviathan\Utillity\Log">
+      <UniqueIdentifier>{e52b9f5c-bf34-4d80-8689-73eb829fa5f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Leviathan\Network\ServerOption">
+      <UniqueIdentifier>{098fbad9-640c-4659-80fd-af7269993a70}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -85,7 +91,7 @@
       <Filter>Leviathan</Filter>
     </ClCompile>
     <ClCompile Include="lev_socket.cpp">
-      <Filter>Leviathan\Network\Socket</Filter>
+      <Filter>Leviathan\Network\LeviathanServer\Server\Socket</Filter>
     </ClCompile>
     <ClCompile Include="lev_bind.cpp">
       <Filter>Leviathan\Network\LeviathanServer\Server\Bind</Filter>
@@ -127,7 +133,13 @@
       <Filter>Leviathan\Network\LeviathanServer</Filter>
     </ClCompile>
     <ClCompile Include="lev_client.cpp">
-      <Filter>Leviathan\Network\LeviathanServer\Client</Filter>
+      <Filter>Leviathan\Network\LeviathanClient\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="lev_log.cpp">
+      <Filter>Leviathan\Utillity\Log</Filter>
+    </ClCompile>
+    <ClCompile Include="lev_server_option.cpp">
+      <Filter>Leviathan\Network\ServerOption</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -135,7 +147,7 @@
       <Filter>Leviathan</Filter>
     </ClInclude>
     <ClInclude Include="lev_socket.h">
-      <Filter>Leviathan\Network\Socket</Filter>
+      <Filter>Leviathan\Network\LeviathanServer\Server\Socket</Filter>
     </ClInclude>
     <ClInclude Include="lev_bind.h">
       <Filter>Leviathan\Network\LeviathanServer\Server\Bind</Filter>
@@ -216,7 +228,13 @@
       <Filter>Leviathan\Network\LeviathanServer</Filter>
     </ClInclude>
     <ClInclude Include="lev_client.h">
-      <Filter>Leviathan\Network\LeviathanServer\Client</Filter>
+      <Filter>Leviathan\Network\LeviathanClient\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="lev_log.h">
+      <Filter>Leviathan\Utillity\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="lev_server_option.h">
+      <Filter>Leviathan\Network\ServerOption</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

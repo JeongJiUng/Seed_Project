@@ -14,7 +14,7 @@ int lev::cEpollCreate::epoll_create()
 
 	if (fd < 0)
 	{
-		//TODO:: PRINT LOG
+		cLog::get_instance()->write("LEV_ERROR", "[EPOLL CREATE] FAIL, ERROR CODE [%d]\n", fd);
 		return FAIL;
 	}
 

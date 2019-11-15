@@ -38,6 +38,8 @@ enum TRIGGER_MOD
 #include <signal.h>
 #include <ucontext.h>
 
+#include <unordered_map>
+
 using namespace	std;
 using namespace lev;
 
@@ -46,8 +48,10 @@ using namespace lev;
 
 #include "lev_singleton.h"
 #include "lev_json.h"
+#include "lev_log.h"
 
 #include "lev_close_socket.h"
+#include "lev_server_option.h"
 
 #include "lev_socket.h"
 #include "lev_bind.h"

@@ -9,7 +9,7 @@ public:
 
 protected:
 	int						m_fd;
-	cJson					m_server_option;
+	cServerOption			m_option;
 
 public:
 	virtual void			start();

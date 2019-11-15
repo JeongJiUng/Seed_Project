@@ -3,7 +3,7 @@
 
 lev::cServer::cServer()
 {
-	m_server_option.open_json_file(SERVER_OPTION);
+	m_option.load_server_option(SERVER_OPTION);
 }
 
 lev::cServer::~cServer()
@@ -14,22 +14,22 @@ lev::cServer::~cServer()
 void lev::cServer::start()
 {
 	int						socket_type;
-	if ("TCP" == m_server_option.get_data("SERVER_TYPE").asString())
+	if ("TCP" == m_option.get_type())
 		socket_type			= SOCK_STREAM;
-	else if ("UDP" == m_server_option.get_data("SERVER_TYPE").asString())
+	else if ("UDP" == m_option.get_type())
 		socket_type			= SOCK_DGRAM;
 	
 	m_fd					= socket(socket_type);
 	if (m_fd == FAIL)
 		return;
 
-	if (bind(m_fd, static_cast<uint16_t>(m_server_option.get_data("SERVER_PORT").asUInt())) == FAIL)
+	if (bind(m_fd, m_option.get_port()) == FAIL)
 	{
 		cCloseSocket::get_instance()->close(m_fd);
 		return;
 	}
 
-	if (listen(m_fd, m_server_option.get_data("LISTEN_BACKLOG").asInt()) == FAIL)
+	if (listen(m_fd, m_option.get_backlog()) == FAIL)
 	{
 		cCloseSocket::get_instance()->close(m_fd);
 		return;

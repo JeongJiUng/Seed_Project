@@ -18,13 +18,12 @@ lev::ACCEPT_INFO lev::cAccept::accept(int _server_fd)
 	info.fd					= ::accept(_server_fd, (struct sockaddr*)&addr, (socklen_t*)&addr_len);
 	if (info.fd < 0)
 	{
-		//TODO:: PRINT LOG
+		cLog::get_instance()->write("LEV_ERROR", "[ACCEPT] FAIL, ERROR CODE [%d]\n", info.fd);
 		info.fd				= FAIL;
 		return info;
 	}
 	else
 	{
-		//TODO:: PRINT ACCPET LOG
 		info.ip				= inet_ntoa(addr.sin_addr);
 	}
 

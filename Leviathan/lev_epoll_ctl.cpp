@@ -20,7 +20,7 @@ bool lev::cEpollCTL::epoll_ctl_add(int _fd)
 
 	if (error < 0)
 	{
-		//TODO:: PRINT LOG
+		cLog::get_instance()->write("LEV_ERROR", "[%d] [EPOLL CTL ADD] FAIL, ERROR CODE [%d]\n", _fd, error);
 		return FAIL;
 	}
 

@@ -21,7 +21,7 @@ bool lev::cBind::bind(int _fd, uint16_t _port)
 	
 	if (error < 0)
 	{
-		//TODO:: PRINT LOG
+		cLog::get_instance()->write("LEV_ERROR", "[BIND] FAIL, ERROR CODE [%d]\n", error);
 		return FAIL;
 	}
 

@@ -22,19 +22,20 @@ bool lev::cEpollServer::accept_clt()
 	flags					|= O_NONBLOCK;
 	if (fcntl(info.fd, F_SETFL, flags) < 0)
 	{
-		//TODO:: PRINT LOG
+		cLog::get_instance()->write("LEV_ERROR", "[SET NON-BLOCKING SOCEKT] FAIL\n");
 		return FAIL;
 	}
 
 	if (epoll_ctl_add(info.fd) == FAIL)
 	{
-		//TODO:: PRINT LOG
 		cCloseSocket::get_instance()->close(info.fd);
 		return FAIL;
 	}
 
 	//TODO:: 클라이언트 매니저에 접속한 클라이언트 정보 추가.
 	client.set_client(info.fd, info.ip);
+
+	cLog::get_instance()->write("LEV_CONNECT", "[%d] CONNECT [%s]\n", info.fd, info.ip);
 
 	return SUCC;
 }
@@ -63,7 +64,7 @@ void lev::cEpollServer::start()
 void lev::cEpollServer::loop()
 {
 	int						event_count;
-	int						max_events = m_server_option.get_data("EPOLL_MAX_EVENT_COUNT").asInt();
+	int						max_events = m_option.get_event_count();
 	struct epoll_event		epoll_events[max_events];
 
 	while (!m_shutdown)
@@ -72,7 +73,7 @@ void lev::cEpollServer::loop()
 
 		if (event_count < 0)
 		{
-			//TODO:: PRINT LOG
+			cLog::get_instance()->write("LEV_ERROR", "[LOOP] EVENT COUNT ERROR [%d]\n", event_count);
 			return;
 		}
 

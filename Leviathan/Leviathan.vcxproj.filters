@@ -73,9 +73,6 @@
     <Filter Include="Leviathan\Network\LeviathanClient\Client">
       <UniqueIdentifier>{2953f507-eadb-4b37-a582-de739192b328}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Leviathan\Network\LeviathanClient\Client\ClientManager">
-      <UniqueIdentifier>{78c8fa09-8ba5-4ef1-9700-01ea2a4d850c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Leviathan\Network\LeviathanServer\Server\Socket">
       <UniqueIdentifier>{866a2b5b-a695-4097-b35e-f342acc2747e}</UniqueIdentifier>
     </Filter>
@@ -84,6 +81,21 @@
     </Filter>
     <Filter Include="Leviathan\Network\ServerOption">
       <UniqueIdentifier>{098fbad9-640c-4659-80fd-af7269993a70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Leviathan\Network\LeviathanClient\ClientManager">
+      <UniqueIdentifier>{78c8fa09-8ba5-4ef1-9700-01ea2a4d850c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Leviathan\Core">
+      <UniqueIdentifier>{8573a70a-4b47-4490-888e-887d75303fbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Leviathan\Core\Stream">
+      <UniqueIdentifier>{e2851da0-bb08-4b63-a5ad-e1b37cecb301}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Leviathan\Core\Memory Pool">
+      <UniqueIdentifier>{ef352e55-5132-48ee-8951-aeedade2c674}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Leviathan\Core\Memory Pool\TCMalloc">
+      <UniqueIdentifier>{a024e460-3781-4bff-b738-a61cee23f82b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -140,6 +152,12 @@
     </ClCompile>
     <ClCompile Include="lev_server_option.cpp">
       <Filter>Leviathan\Network\ServerOption</Filter>
+    </ClCompile>
+    <ClCompile Include="lev_tcmalloc.cpp">
+      <Filter>Leviathan\Core\Memory Pool\TCMalloc</Filter>
+    </ClCompile>
+    <ClCompile Include="lev_memory_pool.cpp">
+      <Filter>Leviathan\Core\Memory Pool</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -235,6 +253,12 @@
     </ClInclude>
     <ClInclude Include="lev_server_option.h">
       <Filter>Leviathan\Network\ServerOption</Filter>
+    </ClInclude>
+    <ClInclude Include="lev_tcmalloc.h">
+      <Filter>Leviathan\Core\Memory Pool\TCMalloc</Filter>
+    </ClInclude>
+    <ClInclude Include="lev_memory_pool.h">
+      <Filter>Leviathan\Core\Memory Pool</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

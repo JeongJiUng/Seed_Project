@@ -50,6 +50,9 @@ using namespace lev;
 #include "lev_json.h"
 #include "lev_log.h"
 
+#include "lev_tcmalloc.h"
+#include "lev_memory_pool.h"
+
 #include "lev_close_socket.h"
 #include "lev_server_option.h"
 

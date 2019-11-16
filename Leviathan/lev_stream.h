@@ -33,6 +33,20 @@ public:
 	bool					write_ushort(ushort _data, size_t _length = sizeof(ushort));
 	bool					write_short(short _data, size_t _length = sizeof(short));
 };
+
+class cStreamManager
+{
+public:
+	cStreamManager();
+	virtual ~cStreamManager();
+
+private:
+	cStream*				m_stream;
+
+public:
+	cStream*				operator->();
+	operator				cStream*();
+};
 }
 
 #include "lev_stream.inl"

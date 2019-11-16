@@ -54,6 +54,8 @@ using namespace lev;
 #include "lev_tcmalloc.h"
 #include "lev_allocator.h"
 
+#include "lev_stream.h"
+
 #include "lev_close_socket.h"
 #include "lev_server_option.h"
 

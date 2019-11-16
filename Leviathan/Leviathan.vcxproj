@@ -150,6 +150,7 @@
     <ClCompile Include="lev_server_adaptor.cpp" />
     <ClCompile Include="lev_server_option.cpp" />
     <ClCompile Include="lev_socket.cpp" />
+    <ClCompile Include="lev_stream.cpp" />
     <ClCompile Include="lev_tcmalloc.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -187,6 +188,7 @@
     <ClInclude Include="lev_server_option.h" />
     <ClInclude Include="lev_singleton.h" />
     <ClInclude Include="lev_socket.h" />
+    <ClInclude Include="lev_stream.h" />
     <ClInclude Include="lev_tcmalloc.h" />
   </ItemGroup>
   <ItemGroup>

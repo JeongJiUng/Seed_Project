@@ -168,6 +168,9 @@
     <ClCompile Include="lev_allocator.cpp">
       <Filter>Leviathan\Core\Memory\Allocator</Filter>
     </ClCompile>
+    <ClCompile Include="lev_stream.cpp">
+      <Filter>Leviathan\Core\Stream</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lev.h">
@@ -271,6 +274,9 @@
     </ClInclude>
     <ClInclude Include="lev_allocator.h">
       <Filter>Leviathan\Core\Memory\Allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="lev_stream.h">
+      <Filter>Leviathan\Core\Stream</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

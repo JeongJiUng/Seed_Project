@@ -132,6 +132,7 @@
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
     <ClCompile Include="lev_accept.cpp" />
+    <ClCompile Include="lev_allocator.cpp" />
     <ClCompile Include="lev_bind.cpp" />
     <ClCompile Include="lev_client.cpp" />
     <ClCompile Include="lev_close_socket.cpp" />
@@ -167,6 +168,7 @@
     <ClInclude Include="include\tcmalloc.h" />
     <ClInclude Include="lev.h" />
     <ClInclude Include="lev_accept.h" />
+    <ClInclude Include="lev_allocator.h" />
     <ClInclude Include="lev_bind.h" />
     <ClInclude Include="lev_client.h" />
     <ClInclude Include="lev_close_socket.h" />

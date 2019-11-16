@@ -91,11 +91,17 @@
     <Filter Include="Leviathan\Core\Stream">
       <UniqueIdentifier>{e2851da0-bb08-4b63-a5ad-e1b37cecb301}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Leviathan\Core\Memory Pool">
-      <UniqueIdentifier>{ef352e55-5132-48ee-8951-aeedade2c674}</UniqueIdentifier>
+    <Filter Include="Leviathan\Core\Memory">
+      <UniqueIdentifier>{db957187-0b67-4293-84cc-3bba08a25fd2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Leviathan\Core\Memory Pool\TCMalloc">
+    <Filter Include="Leviathan\Core\Memory\TCMalloc">
       <UniqueIdentifier>{a024e460-3781-4bff-b738-a61cee23f82b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Leviathan\Core\Memory\Allocator">
+      <UniqueIdentifier>{a740bcba-3393-450a-9ee3-027b69893521}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Leviathan\Core\Memory\Memory Pool">
+      <UniqueIdentifier>{ef352e55-5132-48ee-8951-aeedade2c674}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -154,10 +160,13 @@
       <Filter>Leviathan\Network\ServerOption</Filter>
     </ClCompile>
     <ClCompile Include="lev_tcmalloc.cpp">
-      <Filter>Leviathan\Core\Memory Pool\TCMalloc</Filter>
+      <Filter>Leviathan\Core\Memory\TCMalloc</Filter>
     </ClCompile>
     <ClCompile Include="lev_memory_pool.cpp">
-      <Filter>Leviathan\Core\Memory Pool</Filter>
+      <Filter>Leviathan\Core\Memory\Memory Pool</Filter>
+    </ClCompile>
+    <ClCompile Include="lev_allocator.cpp">
+      <Filter>Leviathan\Core\Memory\Allocator</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -255,10 +264,13 @@
       <Filter>Leviathan\Network\ServerOption</Filter>
     </ClInclude>
     <ClInclude Include="lev_tcmalloc.h">
-      <Filter>Leviathan\Core\Memory Pool\TCMalloc</Filter>
+      <Filter>Leviathan\Core\Memory\TCMalloc</Filter>
     </ClInclude>
     <ClInclude Include="lev_memory_pool.h">
-      <Filter>Leviathan\Core\Memory Pool</Filter>
+      <Filter>Leviathan\Core\Memory\Memory Pool</Filter>
+    </ClInclude>
+    <ClInclude Include="lev_allocator.h">
+      <Filter>Leviathan\Core\Memory\Allocator</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -14,7 +14,7 @@ bool lev::cListen::listen(int _fd, int _backlog)
 
 	if (error < 0)
 	{
-		// TODO:: PRINT LOG
+		cLog::get_instance()->write("LEV_ERROR", "[LISTEN] FAIL, ERROR CODE [%d]\n", error);
 		return FAIL;
 	}
 

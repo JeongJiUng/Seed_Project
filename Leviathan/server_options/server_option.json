@@ -13,38 +13,11 @@
   "LISTEN_BACKLOG": 15,
 
   "EPOLL_MAX_EVENT_COUNT": 1024,
-  "EPOLL_TIME_OUT": -1,
-
-  // 1 -> enable, 0 -> disable
-  "EPOLL_SERVER_EVENTS": {
-    "EPOLLIN": 1,
-    "EPOLLOUT": 1,
-    "EPOLLPRI": 0,
-    "EPOLLRDHUP": 0,
-
-    "EPOLLERR": 1,
-    "EPOLLHUP": 0,
-
-    "EPOLLET": 1,
-    "EPOLLONESHOT": 0
-  },
-  "EPOLL_CLIENT_EVENTS": {
-    "EPOLLIN": 1,
-    "EPOLLOUT": 1,
-    "EPOLLPRI": 0,
-    "EPOLLRDHUP": 0,
-
-    "EPOLLERR": 1,
-    "EPOLLHUP": 0,
-
-    "EPOLLET": 1,
-    "EPOLLONESHOT": 0
-  },
 
   // Log File name and dir
-  "ERROR_LOG_DIR": "./ERROR",
-  "WARRING_LOG_DIR": "./WARRING",
-  "INFO_LOG_DIR": "./INFO",
-  "DEBUGGING_LOG_DIR": "./DEBUGGING",
-  "CONNECT_LOG_DIR": "./CONNECT"
+  "LOGS": [ "LEV_ERROR", "LEV_CONNECT", "LEV_INFO" ],
+
+  "LEV_ERROR": "./LEV_ERROR",
+  "LEV_CONNECT": "./LEV_CONNECT",
+  "LEV_INFO": "./LEV_INFO"
 }

@@ -131,12 +131,26 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
+    <ClCompile Include="lev_accept.cpp" />
+    <ClCompile Include="lev_allocator.cpp" />
     <ClCompile Include="lev_bind.cpp" />
+    <ClCompile Include="lev_client.cpp" />
     <ClCompile Include="lev_close_socket.cpp" />
+    <ClCompile Include="lev_epoll.cpp" />
+    <ClCompile Include="lev_epoll_create.cpp" />
+    <ClCompile Include="lev_epoll_ctl.cpp" />
+    <ClCompile Include="lev_epoll_server.cpp" />
+    <ClCompile Include="lev_epoll_wait.cpp" />
     <ClCompile Include="lev_json.cpp" />
+    <ClCompile Include="lev_leviathan_server.cpp" />
     <ClCompile Include="lev_listen.cpp" />
+    <ClCompile Include="lev_log.cpp" />
+    <ClCompile Include="lev_memory_pool.cpp" />
     <ClCompile Include="lev_server.cpp" />
+    <ClCompile Include="lev_server_adaptor.cpp" />
+    <ClCompile Include="lev_server_option.cpp" />
     <ClCompile Include="lev_socket.cpp" />
+    <ClCompile Include="lev_tcmalloc.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -153,13 +167,27 @@
     <ClInclude Include="include\jsoncpp\writer.h" />
     <ClInclude Include="include\tcmalloc.h" />
     <ClInclude Include="lev.h" />
+    <ClInclude Include="lev_accept.h" />
+    <ClInclude Include="lev_allocator.h" />
     <ClInclude Include="lev_bind.h" />
+    <ClInclude Include="lev_client.h" />
     <ClInclude Include="lev_close_socket.h" />
+    <ClInclude Include="lev_epoll.h" />
+    <ClInclude Include="lev_epoll_create.h" />
+    <ClInclude Include="lev_epoll_ctl.h" />
+    <ClInclude Include="lev_epoll_server.h" />
+    <ClInclude Include="lev_epoll_wait.h" />
     <ClInclude Include="lev_json.h" />
+    <ClInclude Include="lev_leviathan_server.h" />
     <ClInclude Include="lev_listen.h" />
+    <ClInclude Include="lev_log.h" />
+    <ClInclude Include="lev_memory_pool.h" />
     <ClInclude Include="lev_server.h" />
+    <ClInclude Include="lev_server_adaptor.h" />
+    <ClInclude Include="lev_server_option.h" />
     <ClInclude Include="lev_singleton.h" />
     <ClInclude Include="lev_socket.h" />
+    <ClInclude Include="lev_tcmalloc.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="lev_singleton.inl" />

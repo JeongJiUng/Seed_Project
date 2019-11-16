@@ -14,7 +14,7 @@ int lev::cSocket::socket(int _type)
 	
 	if (fd < 0)
 	{
-		//TODO:: PRINT LOG
+		cLog::get_instance()->write("LEV_ERROR", "[SOCKET] FAIL, ERROR CODE [%d]\n", fd);
 		return FAIL;
 	}
 

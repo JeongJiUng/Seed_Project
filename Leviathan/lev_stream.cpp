@@ -86,3 +86,23 @@ bool lev::cStream::write_short(short _data, size_t _length)
 {
 	return write(_data, _length);
 }
+
+lev::cStreamManager::cStreamManager()
+{
+	m_stream				= (cStream*)cAllocator::get_instance()->get_memory().alloc(sizeof(cStream));
+}
+
+lev::cStreamManager::~cStreamManager()
+{
+	cAllocator::get_instance()->get_memory().dealloc(m_stream);
+}
+
+cStream* lev::cStreamManager::operator->()
+{
+	return m_stream;
+}
+
+lev::cStreamManager::operator cStream* ()
+{
+	return m_stream;
+}

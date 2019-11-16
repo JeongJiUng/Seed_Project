@@ -193,6 +193,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="lev_singleton.inl" />
+    <None Include="lev_stream.inl" />
     <None Include="server_options\server_option.json" />
   </ItemGroup>
   <ItemGroup>

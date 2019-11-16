@@ -286,6 +286,9 @@
     <None Include="server_options\server_option.json">
       <Filter>Leviathan\Network\ServerOption</Filter>
     </None>
+    <None Include="lev_stream.inl">
+      <Filter>Leviathan\Core\Stream</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Library Include="libs\libtcmalloc.a">

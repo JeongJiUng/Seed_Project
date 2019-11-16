@@ -168,6 +168,9 @@
     <ClCompile Include="lev_allocator.cpp">
       <Filter>Leviathan\Core\Memory\Allocator</Filter>
     </ClCompile>
+    <ClCompile Include="lev_stream.cpp">
+      <Filter>Leviathan\Core\Stream</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lev.h">
@@ -272,6 +275,9 @@
     <ClInclude Include="lev_allocator.h">
       <Filter>Leviathan\Core\Memory\Allocator</Filter>
     </ClInclude>
+    <ClInclude Include="lev_stream.h">
+      <Filter>Leviathan\Core\Stream</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="lev_singleton.inl">
@@ -279,6 +285,9 @@
     </None>
     <None Include="server_options\server_option.json">
       <Filter>Leviathan\Network\ServerOption</Filter>
+    </None>
+    <None Include="lev_stream.inl">
+      <Filter>Leviathan\Core\Stream</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

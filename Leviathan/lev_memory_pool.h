@@ -12,5 +12,7 @@ public:
 	virtual void*			alloc_array(const size_t _size) = 0;
 	virtual void			dealloc(void* _p) = 0;
 	virtual void			dealloc_array(void* _p) = 0;
+
+
 };
 }

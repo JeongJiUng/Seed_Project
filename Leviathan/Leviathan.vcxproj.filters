@@ -112,6 +112,9 @@
     <Filter Include="Leviathan\Core\Thread\MutilThreadSync\Mutex">
       <UniqueIdentifier>{76cbe1df-c729-4d58-be4b-d4627dea307f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Leviathan\Utillity\Random">
+      <UniqueIdentifier>{5cdceb05-4bc1-44b4-9e2a-b0c8709fb6b5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -182,6 +185,9 @@
     </ClCompile>
     <ClCompile Include="lev_mutex_lock.cpp">
       <Filter>Leviathan\Core\Thread\MutilThreadSync\Mutex</Filter>
+    </ClCompile>
+    <ClCompile Include="lev_random.cpp">
+      <Filter>Leviathan\Utillity\Random</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -295,6 +301,9 @@
     </ClInclude>
     <ClInclude Include="lev_multi_thread_sync.h">
       <Filter>Leviathan\Core\Thread\MutilThreadSync</Filter>
+    </ClInclude>
+    <ClInclude Include="lev_random.h">
+      <Filter>Leviathan\Utillity\Random</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -10,6 +10,8 @@ lev::cEpollCreate::~cEpollCreate()
 
 int lev::cEpollCreate::epoll_create()
 {
+	cLock					lock;
+
 	int						fd = ::epoll_create(1024);
 
 	if (fd < 0)

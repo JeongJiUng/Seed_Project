@@ -12,6 +12,8 @@ lev::cLeviathanServer::~cLeviathanServer()
 
 void lev::cLeviathanServer::run()
 {
+	cLock					lock;
+
 	cout << "#### SERVER START ####" << endl;
 	cLog::get_instance()->write("LEV_INFO", "#### SERVER START ####");
 
@@ -21,6 +23,8 @@ void lev::cLeviathanServer::run()
 
 void lev::cLeviathanServer::shutdown()
 {
+	cLock					lock;
+
 	//TODO:: 서버종료전, 저장해야 할 데이터 저장후 종료.
 	m_server->server_data_save();
 	m_server->shutdown();

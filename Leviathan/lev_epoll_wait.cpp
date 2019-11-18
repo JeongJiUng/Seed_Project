@@ -10,6 +10,8 @@ lev::cEpollWait::~cEpollWait()
 
 int lev::cEpollWait::epoll_wait(epoll_event* _event, int _max_events)
 {
+	cLock					lock;
+
 	int						event_count = 0;
 
 	do

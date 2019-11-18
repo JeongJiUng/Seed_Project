@@ -1,7 +1,7 @@
 #pragma once
 namespace lev
 {
-class cLeviathanServer
+class cLeviathanServer : public cMultiThreadSync<cLeviathanServer>
 {
 public:
 	cLeviathanServer(cServerAdaptor* _server);

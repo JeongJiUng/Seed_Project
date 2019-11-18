@@ -1,7 +1,7 @@
 #pragma once
 namespace lev
 {
-class cServer : public cSocket, public cBind, public cListen, public cAccept
+class cServer : public cSocket, public cBind, public cListen, public cAccept, public cMultiThreadSync<cServer>
 {
 public:
 	cServer();

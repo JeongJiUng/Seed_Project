@@ -13,6 +13,8 @@ lev::cServer::~cServer()
 
 void lev::cServer::start()
 {
+	cLock					lock;
+
 	int						socket_type;
 	if ("TCP" == m_option.get_type())
 		socket_type			= SOCK_STREAM;
@@ -38,20 +40,23 @@ void lev::cServer::start()
 
 void lev::cServer::loop()
 {
-
+	cLock					lock;
 }
 
 void lev::cServer::shutdown()
 {
+	cLock					lock;
 	cCloseSocket::get_instance()->close(m_fd);
 }
 
 void lev::cServer::set_fd(int _fd)
 {
+	cLock					lock;
 	m_fd					= _fd;
 }
 
 int lev::cServer::get_fd()
 {
+	cLock					lock;
 	return m_fd;
 }

@@ -10,6 +10,8 @@ lev::cEpollServer::~cEpollServer()
 
 bool lev::cEpollServer::accept_clt()
 {
+	cLock					lock;
+
 	ACCEPT_INFO				info;
 	cClient					client;
 
@@ -42,6 +44,8 @@ bool lev::cEpollServer::accept_clt()
 
 void lev::cEpollServer::start()
 {
+	cLock					lock;
+
 	cServer::start();
 
 	set_epoll_fd(epoll_create());
@@ -95,6 +99,8 @@ void lev::cEpollServer::loop()
 
 void lev::cEpollServer::shutdown()
 {
+	cLock					lock;
+
 	m_shutdown				= true;
 
 	cCloseSocket::get_instance()->close(get_epoll_fd());

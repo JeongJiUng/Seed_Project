@@ -1,7 +1,7 @@
 #pragma once
 namespace lev
 {
-class cServerOption
+class cServerOption : public cMultiThreadSync<cServerOption>
 {
 public:
 	cServerOption();

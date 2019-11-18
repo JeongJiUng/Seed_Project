@@ -1,7 +1,7 @@
 #pragma once
 namespace lev
 {
-class cMemoryPool : public cMultiThreadSync<cMemoryPool>
+class cMemoryPool
 {
 public:
 	cMemoryPool();

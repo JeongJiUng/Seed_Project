@@ -103,6 +103,18 @@
     <Filter Include="Leviathan\Core\Memory\Memory Pool">
       <UniqueIdentifier>{ef352e55-5132-48ee-8951-aeedade2c674}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Leviathan\Core\Thread">
+      <UniqueIdentifier>{6592e22d-3d0f-4120-a120-58daf04c6d74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Leviathan\Core\Thread\MutilThreadSync">
+      <UniqueIdentifier>{5be60f69-9230-46a1-83d4-659de29037b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Leviathan\Core\Thread\MutilThreadSync\Mutex">
+      <UniqueIdentifier>{76cbe1df-c729-4d58-be4b-d4627dea307f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Leviathan\Utillity\Random">
+      <UniqueIdentifier>{5cdceb05-4bc1-44b4-9e2a-b0c8709fb6b5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -167,6 +179,15 @@
     </ClCompile>
     <ClCompile Include="lev_allocator.cpp">
       <Filter>Leviathan\Core\Memory\Allocator</Filter>
+    </ClCompile>
+    <ClCompile Include="lev_stream.cpp">
+      <Filter>Leviathan\Core\Stream</Filter>
+    </ClCompile>
+    <ClCompile Include="lev_mutex_lock.cpp">
+      <Filter>Leviathan\Core\Thread\MutilThreadSync\Mutex</Filter>
+    </ClCompile>
+    <ClCompile Include="lev_random.cpp">
+      <Filter>Leviathan\Utillity\Random</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -272,6 +293,18 @@
     <ClInclude Include="lev_allocator.h">
       <Filter>Leviathan\Core\Memory\Allocator</Filter>
     </ClInclude>
+    <ClInclude Include="lev_stream.h">
+      <Filter>Leviathan\Core\Stream</Filter>
+    </ClInclude>
+    <ClInclude Include="lev_mutex_lock.h">
+      <Filter>Leviathan\Core\Thread\MutilThreadSync\Mutex</Filter>
+    </ClInclude>
+    <ClInclude Include="lev_multi_thread_sync.h">
+      <Filter>Leviathan\Core\Thread\MutilThreadSync</Filter>
+    </ClInclude>
+    <ClInclude Include="lev_random.h">
+      <Filter>Leviathan\Utillity\Random</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="lev_singleton.inl">
@@ -280,6 +313,10 @@
     <None Include="server_options\server_option.json">
       <Filter>Leviathan\Network\ServerOption</Filter>
     </None>
+    <None Include="lev_stream.inl">
+      <Filter>Leviathan\Core\Stream</Filter>
+    </None>
+    <None Include="Network.cd" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="libs\libtcmalloc.a">

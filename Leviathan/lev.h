@@ -26,6 +26,8 @@ enum TRIGGER_MOD
 #include <pthread.h>
 #include <mutex>
 #include <stdarg.h>
+#include <random>
+#include <ctime>
 
 #include <sys/time.h>
 #include <sys/unistd.h>
@@ -49,10 +51,16 @@ using namespace lev;
 #include "lev_singleton.h"
 #include "lev_json.h"
 #include "lev_log.h"
+#include "lev_random.h"
+
+#include "lev_mutex_lock.h"
+#include "lev_multi_thread_sync.h"
 
 #include "lev_memory_pool.h"
 #include "lev_tcmalloc.h"
 #include "lev_allocator.h"
+
+#include "lev_stream.h"
 
 #include "lev_close_socket.h"
 #include "lev_server_option.h"

@@ -307,6 +307,7 @@
     <None Include="lev_stream.inl">
       <Filter>Leviathan\Core\Stream</Filter>
     </None>
+    <None Include="Network.cd" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="libs\libtcmalloc.a">

@@ -146,6 +146,8 @@
     <ClCompile Include="lev_listen.cpp" />
     <ClCompile Include="lev_log.cpp" />
     <ClCompile Include="lev_memory_pool.cpp" />
+    <ClCompile Include="lev_mutex_lock.cpp" />
+    <ClCompile Include="lev_random.cpp" />
     <ClCompile Include="lev_server.cpp" />
     <ClCompile Include="lev_server_adaptor.cpp" />
     <ClCompile Include="lev_server_option.cpp" />
@@ -183,6 +185,8 @@
     <ClInclude Include="lev_listen.h" />
     <ClInclude Include="lev_log.h" />
     <ClInclude Include="lev_memory_pool.h" />
+    <ClInclude Include="lev_mutex_lock.h" />
+    <ClInclude Include="lev_random.h" />
     <ClInclude Include="lev_server.h" />
     <ClInclude Include="lev_server_adaptor.h" />
     <ClInclude Include="lev_server_option.h" />
@@ -190,8 +194,10 @@
     <ClInclude Include="lev_socket.h" />
     <ClInclude Include="lev_stream.h" />
     <ClInclude Include="lev_tcmalloc.h" />
+    <ClInclude Include="lev_multi_thread_sync.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Network.cd" />
     <None Include="lev_singleton.inl" />
     <None Include="lev_stream.inl" />
     <None Include="server_options\server_option.json" />

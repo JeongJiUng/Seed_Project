@@ -1,7 +1,7 @@
 #pragma once
 namespace lev
 {
-class cServer : public cSocket, public cBind, public cListen, public cAccept, public cMultiThreadSync<cServer>
+class cServer : public cSocket, public cBind, public cListen, public cAccept, public cMultiThreadSync<cServer>, public cThread
 {
 public:
 	cServer();
@@ -13,7 +13,7 @@ protected:
 
 public:
 	virtual void			start();
-	virtual void			loop();
+	virtual void*			loop();
 	virtual void			shutdown();
 
 	void					set_fd(int _fd);

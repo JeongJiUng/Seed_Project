@@ -115,6 +115,15 @@
     <Filter Include="Leviathan\Utillity\Random">
       <UniqueIdentifier>{5cdceb05-4bc1-44b4-9e2a-b0c8709fb6b5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Leviathan\Core\I/O">
+      <UniqueIdentifier>{1464de2f-f61a-4df0-bb27-ac0833720dae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Leviathan\Core\I/O\Receive">
+      <UniqueIdentifier>{587e79b2-67cb-4abb-97e3-ae6bb27a5b5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Leviathan\Core\I/O\Send">
+      <UniqueIdentifier>{d7f72320-4b07-4a5d-968d-89dcff111b31}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -188,6 +197,9 @@
     </ClCompile>
     <ClCompile Include="lev_random.cpp">
       <Filter>Leviathan\Utillity\Random</Filter>
+    </ClCompile>
+    <ClCompile Include="lev_thread.cpp">
+      <Filter>Leviathan\Core\Thread</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -304,6 +316,9 @@
     </ClInclude>
     <ClInclude Include="lev_random.h">
       <Filter>Leviathan\Utillity\Random</Filter>
+    </ClInclude>
+    <ClInclude Include="lev_thread.h">
+      <Filter>Leviathan\Core\Thread</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

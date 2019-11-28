@@ -154,6 +154,7 @@
     <ClCompile Include="lev_socket.cpp" />
     <ClCompile Include="lev_stream.cpp" />
     <ClCompile Include="lev_tcmalloc.cpp" />
+    <ClCompile Include="lev_thread.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -195,6 +196,7 @@
     <ClInclude Include="lev_stream.h" />
     <ClInclude Include="lev_tcmalloc.h" />
     <ClInclude Include="lev_multi_thread_sync.h" />
+    <ClInclude Include="lev_thread.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Network.cd" />

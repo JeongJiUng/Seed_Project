@@ -38,14 +38,12 @@ void lev::cServer::start()
 	}
 }
 
-void lev::cServer::loop()
+void* lev::cServer::loop()
 {
-	cLock					lock;
 }
 
 void lev::cServer::shutdown()
 {
-	cLock					lock;
 	cCloseSocket::get_instance()->close(m_fd);
 }
 

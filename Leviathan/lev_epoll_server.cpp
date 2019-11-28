@@ -8,6 +8,17 @@ lev::cEpollServer::~cEpollServer()
 {
 }
 
+void lev::cEpollServer::run()
+{
+	start();
+	cLog::get_instance()->write("LEV_INFO", "CREATE SERVER ACCEPT THREAD\n");
+	cout << "CREATE SERVER ACCEPT THREAD" << endl;
+	if (create_thread(create_thread_helper, (cEpollServer*)this) == FAIL)
+	{
+		shutdown();
+	}
+}
+
 bool lev::cEpollServer::accept_clt()
 {
 	cLock					lock;
@@ -42,10 +53,13 @@ bool lev::cEpollServer::accept_clt()
 	return SUCC;
 }
 
+void* lev::cEpollServer::create_thread_helper(void* arg)
+{
+	return ((cEpollServer*)arg)->loop();
+}
+
 void lev::cEpollServer::start()
 {
-	cLock					lock;
-
 	cServer::start();
 
 	set_epoll_fd(epoll_create());
@@ -65,7 +79,7 @@ void lev::cEpollServer::start()
 	m_shutdown				= false;
 }
 
-void lev::cEpollServer::loop()
+void* lev::cEpollServer::loop()
 {
 	int						event_count;
 	int						max_events = m_option.get_event_count();
@@ -78,7 +92,7 @@ void lev::cEpollServer::loop()
 		if (event_count < 0)
 		{
 			cLog::get_instance()->write("LEV_ERROR", "[LOOP] EVENT COUNT ERROR [%d]\n", event_count);
-			return;
+			continue;
 		}
 
 		for (int i = 0; i < event_count; i++)
@@ -95,14 +109,14 @@ void lev::cEpollServer::loop()
 			}
 		}
 	}
+
+	return NULL;
 }
 
 void lev::cEpollServer::shutdown()
 {
-	cLock					lock;
-
-	m_shutdown				= true;
-
 	cCloseSocket::get_instance()->close(get_epoll_fd());
 	cCloseSocket::get_instance()->close(get_fd());
+
+	m_shutdown				= true;
 }

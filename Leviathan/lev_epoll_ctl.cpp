@@ -10,8 +10,6 @@ lev::cEpollCTL::~cEpollCTL()
 
 bool lev::cEpollCTL::epoll_ctl_add(int _fd)
 {
-	cLock					lock;
-
 	int						error;
 	struct epoll_event		events;
 
@@ -31,15 +29,13 @@ bool lev::cEpollCTL::epoll_ctl_add(int _fd)
 
 bool lev::cEpollCTL::epoll_ctl_del(int _fd)
 {
-	cLock					lock;
-
 	int						error;
 
 	error					= ::epoll_ctl(get_epoll_fd(), EPOLL_CTL_ADD, _fd, NULL);
 
 	if (error < 0)
 	{
-		//TODO:: PRINT LOG
+		cLog::get_instance()->write("LEV_ERROR", "[%d] PEPOLL CTL DEL] FAIL, ERRO CODE[%d]\n", _fd, error);
 		return FAIL;
 	}
 

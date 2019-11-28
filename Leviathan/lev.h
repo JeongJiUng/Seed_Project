@@ -55,6 +55,7 @@ using namespace lev;
 
 #include "lev_mutex_lock.h"
 #include "lev_multi_thread_sync.h"
+#include "lev_thread.h"
 
 #include "lev_memory_pool.h"
 #include "lev_tcmalloc.h"

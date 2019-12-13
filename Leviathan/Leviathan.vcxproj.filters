@@ -121,8 +121,11 @@
     <Filter Include="Leviathan\Core\I/O\Receive">
       <UniqueIdentifier>{587e79b2-67cb-4abb-97e3-ae6bb27a5b5b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Leviathan\Core\I/O\Receive\Receive Queue">
+      <UniqueIdentifier>{351f8d01-42d5-41c0-9137-c5e019a03503}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Leviathan\Core\I/O\Send">
-      <UniqueIdentifier>{d7f72320-4b07-4a5d-968d-89dcff111b31}</UniqueIdentifier>
+      <UniqueIdentifier>{c4aadb05-c1ba-45a9-8eaa-2ab83a3bb678}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -200,6 +203,12 @@
     </ClCompile>
     <ClCompile Include="lev_thread.cpp">
       <Filter>Leviathan\Core\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="lev_receive.cpp">
+      <Filter>Leviathan\Core\I/O\Receive</Filter>
+    </ClCompile>
+    <ClCompile Include="lev_send.cpp">
+      <Filter>Leviathan\Core\I/O\Send</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -319,6 +328,12 @@
     </ClInclude>
     <ClInclude Include="lev_thread.h">
       <Filter>Leviathan\Core\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="lev_receive.h">
+      <Filter>Leviathan\Core\I/O\Receive</Filter>
+    </ClInclude>
+    <ClInclude Include="lev_send.h">
+      <Filter>Leviathan\Core\I/O\Send</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

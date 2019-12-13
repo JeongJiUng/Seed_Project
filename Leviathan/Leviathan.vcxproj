@@ -148,6 +148,8 @@
     <ClCompile Include="lev_memory_pool.cpp" />
     <ClCompile Include="lev_mutex_lock.cpp" />
     <ClCompile Include="lev_random.cpp" />
+    <ClCompile Include="lev_receive.cpp" />
+    <ClCompile Include="lev_send.cpp" />
     <ClCompile Include="lev_server.cpp" />
     <ClCompile Include="lev_server_adaptor.cpp" />
     <ClCompile Include="lev_server_option.cpp" />
@@ -188,6 +190,8 @@
     <ClInclude Include="lev_memory_pool.h" />
     <ClInclude Include="lev_mutex_lock.h" />
     <ClInclude Include="lev_random.h" />
+    <ClInclude Include="lev_receive.h" />
+    <ClInclude Include="lev_send.h" />
     <ClInclude Include="lev_server.h" />
     <ClInclude Include="lev_server_adaptor.h" />
     <ClInclude Include="lev_server_option.h" />
@@ -210,7 +214,7 @@
   </ItemGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Server|x64'">
     <Link>
-      <AdditionalOptions>-pthread -lm %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-pthread -lm -lrt %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <ClCompile>
       <CppLanguageStandard>c++14</CppLanguageStandard>
@@ -220,76 +224,121 @@
     <ClCompile>
       <CppLanguageStandard>c++14</CppLanguageStandard>
     </ClCompile>
+    <Link>
+      <AdditionalOptions>-pthread -lm -lrt %(AdditionalOptions)</AdditionalOptions>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Server|ARM'">
     <ClCompile>
       <CppLanguageStandard>c++14</CppLanguageStandard>
     </ClCompile>
+    <Link>
+      <AdditionalOptions>-pthread -lm -lrt %(AdditionalOptions)</AdditionalOptions>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Client|ARM'">
     <ClCompile>
       <CppLanguageStandard>c++14</CppLanguageStandard>
     </ClCompile>
+    <Link>
+      <AdditionalOptions>-pthread -lm -lrt %(AdditionalOptions)</AdditionalOptions>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Server|ARM'">
     <ClCompile>
       <CppLanguageStandard>c++14</CppLanguageStandard>
     </ClCompile>
+    <Link>
+      <AdditionalOptions>-pthread -lm -lrt %(AdditionalOptions)</AdditionalOptions>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Client|ARM64'">
     <ClCompile>
       <CppLanguageStandard>c++14</CppLanguageStandard>
     </ClCompile>
+    <Link>
+      <AdditionalOptions>-pthread -lm -lrt %(AdditionalOptions)</AdditionalOptions>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Server|ARM64'">
     <ClCompile>
       <CppLanguageStandard>c++14</CppLanguageStandard>
     </ClCompile>
+    <Link>
+      <AdditionalOptions>-pthread -lm -lrt %(AdditionalOptions)</AdditionalOptions>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Client|ARM64'">
     <ClCompile>
       <CppLanguageStandard>c++14</CppLanguageStandard>
     </ClCompile>
+    <Link>
+      <AdditionalOptions>-pthread -lm -lrt %(AdditionalOptions)</AdditionalOptions>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Server|ARM64'">
     <ClCompile>
       <CppLanguageStandard>c++14</CppLanguageStandard>
     </ClCompile>
+    <Link>
+      <AdditionalOptions>-pthread -lm -lrt %(AdditionalOptions)</AdditionalOptions>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Client|x64'">
     <ClCompile>
       <CppLanguageStandard>c++14</CppLanguageStandard>
     </ClCompile>
+    <Link>
+      <AdditionalOptions>-pthread -lm -lrt %(AdditionalOptions)</AdditionalOptions>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Client|x64'">
     <ClCompile>
       <CppLanguageStandard>c++14</CppLanguageStandard>
     </ClCompile>
+    <Link>
+      <AdditionalOptions>-pthread -lm -lrt %(AdditionalOptions)</AdditionalOptions>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Server|x64'">
     <ClCompile>
       <CppLanguageStandard>c++14</CppLanguageStandard>
     </ClCompile>
+    <Link>
+      <AdditionalOptions>-pthread -lm -lrt %(AdditionalOptions)</AdditionalOptions>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Client|x86'">
     <ClCompile>
       <CppLanguageStandard>c++14</CppLanguageStandard>
     </ClCompile>
+    <Link>
+      <AdditionalOptions>-pthread -lm -lrt %(AdditionalOptions)</AdditionalOptions>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Server|x86'">
     <ClCompile>
       <CppLanguageStandard>c++14</CppLanguageStandard>
     </ClCompile>
+    <Link>
+      <AdditionalOptions>-pthread -lm -lrt %(AdditionalOptions)</AdditionalOptions>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Client|x86'">
     <ClCompile>
       <CppLanguageStandard>c++14</CppLanguageStandard>
     </ClCompile>
+    <Link>
+      <AdditionalOptions>-pthread -lm -lrt %(AdditionalOptions)</AdditionalOptions>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Server|x86'">
     <ClCompile>
       <CppLanguageStandard>c++14</CppLanguageStandard>
     </ClCompile>
+    <Link>
+      <AdditionalOptions>-pthread -lm -lrt %(AdditionalOptions)</AdditionalOptions>
+    </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

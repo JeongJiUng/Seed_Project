@@ -39,7 +39,5 @@ int main()
 		}
 	}
 
-	lev_server.shutdown();
-
 	return 0;
 }

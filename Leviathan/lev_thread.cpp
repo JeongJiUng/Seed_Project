@@ -26,5 +26,6 @@ bool lev::cThread::create_thread(void* _function(void* arg), void* context)
 	}
 
 	cLog::get_instance()->write("LEV_INFO", "CREATE THREAD. THREAD ID [%lu]\n", m_tID);
+	cout << "CREATE THREAD. THREAD ID [" << m_tID << "]" << endl;
 	return SUCC;
 }

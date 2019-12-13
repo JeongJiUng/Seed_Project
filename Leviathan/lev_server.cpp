@@ -27,19 +27,18 @@ void lev::cServer::start()
 
 	if (bind(m_fd, m_option.get_port()) == FAIL)
 	{
-		cCloseSocket::get_instance()->close(m_fd);
 		return;
 	}
 
 	if (listen(m_fd, m_option.get_backlog()) == FAIL)
 	{
-		cCloseSocket::get_instance()->close(m_fd);
 		return;
 	}
 }
 
 void* lev::cServer::loop()
 {
+	return NULL;
 }
 
 void lev::cServer::shutdown()
@@ -57,4 +56,9 @@ int lev::cServer::get_fd()
 {
 	cLock					lock;
 	return m_fd;
+}
+
+cServerOption lev::cServer::get_server_option()
+{
+	return m_option;
 }

@@ -18,5 +18,6 @@ public:
 
 	void					set_fd(int _fd);
 	int						get_fd();
+	cServerOption			get_server_option();
 };
 }

@@ -41,6 +41,7 @@ enum TRIGGER_MOD
 #include <ucontext.h>
 
 #include <unordered_map>
+#include <aio.h>
 
 using namespace	std;
 using namespace lev;
@@ -62,6 +63,9 @@ using namespace lev;
 #include "lev_allocator.h"
 
 #include "lev_stream.h"
+
+#include "lev_receive.h"
+#include "lev_send.h"
 
 #include "lev_close_socket.h"
 #include "lev_server_option.h"

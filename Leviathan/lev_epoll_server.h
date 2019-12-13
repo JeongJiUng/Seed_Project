@@ -8,9 +8,6 @@ public:
 	virtual ~cEpollServer();
 
 private:
-	bool					m_shutdown;
-
-private:
 	bool					accept_clt();
 
 protected:

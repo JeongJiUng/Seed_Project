@@ -28,5 +28,16 @@ int main()
 	cLeviathanServer		lev_server(new cTestServer);
 	lev_server.run();
 
+	string					input;
+	while (true)
+	{
+		cin >> input;
+
+		if (input == "exit")
+		{
+			break;
+		}
+	}
+
 	return 0;
 }

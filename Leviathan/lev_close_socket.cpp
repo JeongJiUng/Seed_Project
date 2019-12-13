@@ -2,6 +2,8 @@
 
 void lev::cCloseSocket::close(int _fd)
 {
+	cLock					lock;
+
 	cLog::get_instance()->write("LEV_CONNECT", "[%d] CLOSE SOCKET\n", _fd);
 	::close(_fd);
 }

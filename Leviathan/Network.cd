@@ -14,13 +14,6 @@
       <FileName>lev_leviathan_server.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="lev::cServer">
-    <Position X="3.25" Y="3.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAKAAAAQACAAhAAAAAAAAAAAAAIQCAAAAAAAAAAA=</HashCode>
-      <FileName>lev_server.h</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="lev::cSocket">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
@@ -52,7 +45,7 @@
   <Class Name="lev::cEpollServer">
     <Position X="7.5" Y="7.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAgAAAAAKAAhAAAAAAAAQAAAAAAAAAAAAAAAAAE=</HashCode>
+      <HashCode>AAAAAggAAAAAKAAhAAAAAAAASAAAAAAAAAAAAAAAAAE=</HashCode>
       <FileName>lev_epoll_server.h</FileName>
     </TypeIdentifier>
   </Class>
@@ -82,6 +75,27 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAQgAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>lev_epoll_wait.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lev::cServer">
+    <Position X="3.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAKAAAAQACAAhAAAAAAAAAAAAAIQCAAAAAAAAAAA=</HashCode>
+      <FileName>lev_server.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lev::cCloseSocket">
+    <Position X="0.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>lev_close_socket.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lev::cThread">
+    <Position X="3.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgQQIAAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAA=</HashCode>
+      <FileName>lev_thread.h</FileName>
     </TypeIdentifier>
   </Class>
   <Struct Name="lev::accept_info" Collapsed="true">

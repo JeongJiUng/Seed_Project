@@ -35,7 +35,7 @@ bool lev::cEpollCTL::epoll_ctl_del(int _fd)
 
 	if (error < 0)
 	{
-		//TODO:: PRINT LOG
+		cLog::get_instance()->write("LEV_ERROR", "[%d] PEPOLL CTL DEL] FAIL, ERRO CODE[%d]\n", _fd, error);
 		return FAIL;
 	}
 

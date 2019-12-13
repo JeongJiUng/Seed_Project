@@ -6,6 +6,18 @@ lev::cEpollServer::cEpollServer()
 
 lev::cEpollServer::~cEpollServer()
 {
+	shutdown();
+}
+
+void lev::cEpollServer::run()
+{
+	start();
+	cLog::get_instance()->write("LEV_INFO", "CREATE SERVER ACCEPT THREAD\n");
+	cout << "CREATE SERVER ACCEPT THREAD" << endl;
+	if (create_thread(create_thread_helper, (cEpollServer*)this) == FAIL)
+	{
+		shutdown();
+	}
 }
 
 bool lev::cEpollServer::accept_clt()
@@ -35,9 +47,14 @@ bool lev::cEpollServer::accept_clt()
 	//TODO:: 클라이언트 매니저에 접속한 클라이언트 정보 추가.
 	client.set_client(info.fd, info.ip);
 
-	cLog::get_instance()->write("LEV_CONNECT", "[%d] CONNECT [%s]\n", info.fd, info.ip);
+	cLog::get_instance()->write("LEV_CONNECT", "[%d] CONNECT [%s]\n", info.fd, info.ip.c_str());
 
 	return SUCC;
+}
+
+void* lev::cEpollServer::create_thread_helper(void* arg)
+{
+	return ((cEpollServer*)arg)->loop();
 }
 
 void lev::cEpollServer::start()
@@ -47,34 +64,29 @@ void lev::cEpollServer::start()
 	set_epoll_fd(epoll_create());
 	if (get_epoll_fd() == FAIL)
 	{
-		cCloseSocket::get_instance()->close(get_fd());
 		return;
 	}
 
 	if (epoll_ctl_add(get_fd()) == FAIL)
 	{
-		cCloseSocket::get_instance()->close(get_fd());
-		cCloseSocket::get_instance()->close(get_epoll_fd());
 		return;
 	}
-
-	m_shutdown				= false;
 }
 
-void lev::cEpollServer::loop()
+void* lev::cEpollServer::loop()
 {
 	int						event_count;
 	int						max_events = m_option.get_event_count();
 	struct epoll_event		epoll_events[max_events];
 
-	while (!m_shutdown)
+	while (true)
 	{
 		event_count			= epoll_wait(epoll_events, max_events);
 
 		if (event_count < 0)
 		{
 			cLog::get_instance()->write("LEV_ERROR", "[LOOP] EVENT COUNT ERROR [%d]\n", event_count);
-			return;
+			continue;
 		}
 
 		for (int i = 0; i < event_count; i++)
@@ -88,15 +100,16 @@ void lev::cEpollServer::loop()
 			else
 			{
 				//TODO:: PUSH RECV QUEUE
+				cReceive	recv;
+				recv.receive(epoll_events[i].data.fd);
 			}
 		}
 	}
+
+	return NULL;
 }
 
 void lev::cEpollServer::shutdown()
 {
-	m_shutdown				= true;
-
 	cCloseSocket::get_instance()->close(get_epoll_fd());
-	cCloseSocket::get_instance()->close(get_fd());
 }

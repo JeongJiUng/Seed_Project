@@ -13,6 +13,8 @@ lev::cServer::~cServer()
 
 void lev::cServer::start()
 {
+	cLock					lock;
+
 	int						socket_type;
 	if ("TCP" == m_option.get_type())
 		socket_type			= SOCK_STREAM;
@@ -25,20 +27,18 @@ void lev::cServer::start()
 
 	if (bind(m_fd, m_option.get_port()) == FAIL)
 	{
-		cCloseSocket::get_instance()->close(m_fd);
 		return;
 	}
 
 	if (listen(m_fd, m_option.get_backlog()) == FAIL)
 	{
-		cCloseSocket::get_instance()->close(m_fd);
 		return;
 	}
 }
 
-void lev::cServer::loop()
+void* lev::cServer::loop()
 {
-
+	return NULL;
 }
 
 void lev::cServer::shutdown()
@@ -48,10 +48,17 @@ void lev::cServer::shutdown()
 
 void lev::cServer::set_fd(int _fd)
 {
+	cLock					lock;
 	m_fd					= _fd;
 }
 
 int lev::cServer::get_fd()
 {
+	cLock					lock;
 	return m_fd;
+}
+
+cServerOption lev::cServer::get_server_option()
+{
+	return m_option;
 }

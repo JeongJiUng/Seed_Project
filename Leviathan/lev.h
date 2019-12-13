@@ -55,12 +55,16 @@ using namespace lev;
 
 #include "lev_mutex_lock.h"
 #include "lev_multi_thread_sync.h"
+#include "lev_thread.h"
 
 #include "lev_memory_pool.h"
 #include "lev_tcmalloc.h"
 #include "lev_allocator.h"
 
 #include "lev_stream.h"
+
+#include "lev_receive.h"
+#include "lev_send.h"
 
 #include "lev_close_socket.h"
 #include "lev_server_option.h"

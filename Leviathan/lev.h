@@ -41,7 +41,6 @@ enum TRIGGER_MOD
 #include <ucontext.h>
 
 #include <unordered_map>
-#include <aio.h>
 
 using namespace	std;
 using namespace lev;

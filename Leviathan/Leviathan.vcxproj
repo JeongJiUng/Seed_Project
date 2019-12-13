@@ -214,7 +214,7 @@
   </ItemGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Server|x64'">
     <Link>
-      <AdditionalOptions>-pthread -lm -lrt %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-pthread -lm %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <ClCompile>
       <CppLanguageStandard>c++14</CppLanguageStandard>
@@ -225,7 +225,7 @@
       <CppLanguageStandard>c++14</CppLanguageStandard>
     </ClCompile>
     <Link>
-      <AdditionalOptions>-pthread -lm -lrt %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-pthread -lm %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Server|ARM'">
@@ -233,7 +233,7 @@
       <CppLanguageStandard>c++14</CppLanguageStandard>
     </ClCompile>
     <Link>
-      <AdditionalOptions>-pthread -lm -lrt %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-pthread -lm %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Client|ARM'">
@@ -241,7 +241,7 @@
       <CppLanguageStandard>c++14</CppLanguageStandard>
     </ClCompile>
     <Link>
-      <AdditionalOptions>-pthread -lm -lrt %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-pthread -lm %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Server|ARM'">
@@ -249,7 +249,7 @@
       <CppLanguageStandard>c++14</CppLanguageStandard>
     </ClCompile>
     <Link>
-      <AdditionalOptions>-pthread -lm -lrt %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-pthread -lm %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Client|ARM64'">
@@ -257,7 +257,7 @@
       <CppLanguageStandard>c++14</CppLanguageStandard>
     </ClCompile>
     <Link>
-      <AdditionalOptions>-pthread -lm -lrt %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-pthread -lm %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Server|ARM64'">
@@ -265,7 +265,7 @@
       <CppLanguageStandard>c++14</CppLanguageStandard>
     </ClCompile>
     <Link>
-      <AdditionalOptions>-pthread -lm -lrt %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-pthread -lm %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Client|ARM64'">
@@ -273,7 +273,7 @@
       <CppLanguageStandard>c++14</CppLanguageStandard>
     </ClCompile>
     <Link>
-      <AdditionalOptions>-pthread -lm -lrt %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-pthread -lm %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Server|ARM64'">
@@ -281,7 +281,7 @@
       <CppLanguageStandard>c++14</CppLanguageStandard>
     </ClCompile>
     <Link>
-      <AdditionalOptions>-pthread -lm -lrt %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-pthread -lm %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Client|x64'">
@@ -289,7 +289,7 @@
       <CppLanguageStandard>c++14</CppLanguageStandard>
     </ClCompile>
     <Link>
-      <AdditionalOptions>-pthread -lm -lrt %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-pthread -lm %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Client|x64'">
@@ -297,7 +297,7 @@
       <CppLanguageStandard>c++14</CppLanguageStandard>
     </ClCompile>
     <Link>
-      <AdditionalOptions>-pthread -lm -lrt %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-pthread -lm %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Server|x64'">
@@ -305,7 +305,7 @@
       <CppLanguageStandard>c++14</CppLanguageStandard>
     </ClCompile>
     <Link>
-      <AdditionalOptions>-pthread -lm -lrt %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-pthread -lm %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Client|x86'">
@@ -313,7 +313,7 @@
       <CppLanguageStandard>c++14</CppLanguageStandard>
     </ClCompile>
     <Link>
-      <AdditionalOptions>-pthread -lm -lrt %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-pthread -lm %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Server|x86'">
@@ -321,7 +321,7 @@
       <CppLanguageStandard>c++14</CppLanguageStandard>
     </ClCompile>
     <Link>
-      <AdditionalOptions>-pthread -lm -lrt %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-pthread -lm %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Client|x86'">
@@ -329,7 +329,7 @@
       <CppLanguageStandard>c++14</CppLanguageStandard>
     </ClCompile>
     <Link>
-      <AdditionalOptions>-pthread -lm -lrt %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-pthread -lm %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Server|x86'">
@@ -337,7 +337,7 @@
       <CppLanguageStandard>c++14</CppLanguageStandard>
     </ClCompile>
     <Link>
-      <AdditionalOptions>-pthread -lm -lrt %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-pthread -lm %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

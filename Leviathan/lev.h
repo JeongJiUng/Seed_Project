@@ -69,10 +69,8 @@ using namespace lev;
 #include "lev_close_socket.h"
 #include "lev_server_option.h"
 
+#include "lev_endpoint.h"
 #include "lev_socket.h"
-#include "lev_bind.h"
-#include "lev_listen.h"
-#include "lev_accept.h"
 #include "lev_server.h"
 
 #include "lev_epoll.h"

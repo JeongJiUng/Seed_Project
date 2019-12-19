@@ -81,6 +81,20 @@ void lev::cSocket::set_fd(int _fd)
 	m_fd					= _fd;
 }
 
+bool lev::cSocket::set_nonblocking()
+{
+	u_long					val = 1;
+	int						error = ioctl(m_fd, FIONBIO, &val);
+	
+	if (error != 0)
+	{
+		cLog::get_instance()->write("LEV_ERROR", "[SET NON-BLOCKING SOCEKT] FAIL\n");
+		return FAIL;
+	}
+	
+	return SUCC;
+}
+
 int lev::cSocket::get_fd()
 {
 	return m_fd;

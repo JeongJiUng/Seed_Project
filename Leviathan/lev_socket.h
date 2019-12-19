@@ -33,6 +33,7 @@ public:
 	void					connect(const cEndpoint& _endpoint);
 
 	void					set_fd(int _fd);
+	bool					set_nonblocking();
 
 	int						get_fd();
 };

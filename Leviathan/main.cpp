@@ -13,20 +13,14 @@ public:
 	virtual ~cTestServer()
 	{
 	}
-
-public:
-	void server_data_save()
-	{
-
-	}
 };
 
 int main()
 {
 	cout << "hello World!!" <<endl;
 
-	cLeviathanServer		lev_server(new cTestServer);
-	lev_server.run();
+	cTestServer				server;
+	server.run();
 
 	string					input;
 	while (true)
@@ -35,6 +29,7 @@ int main()
 
 		if (input == "exit")
 		{
+			server.stop();
 			break;
 		}
 	}

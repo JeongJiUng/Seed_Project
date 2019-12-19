@@ -29,6 +29,7 @@ enum TRIGGER_MOD
 #include <random>
 #include <ctime>
 
+#include <sys/ioctl.h>
 #include <sys/time.h>
 #include <sys/unistd.h>
 #include <sys/socket.h>
@@ -71,15 +72,9 @@ using namespace lev;
 
 #include "lev_endpoint.h"
 #include "lev_socket.h"
+#include "lev_epoll.h"
 #include "lev_server.h"
 
-#include "lev_epoll.h"
-#include "lev_epoll_create.h"
-#include "lev_epoll_ctl.h"
-#include "lev_epoll_wait.h"
-#include "lev_epoll_server.h"
-
 #include "lev_server_adaptor.h"
-#include "lev_leviathan_server.h"
 
 #include "lev_client.h"

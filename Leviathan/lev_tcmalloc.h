@@ -1,6 +1,7 @@
 #pragma once
 namespace lev
 {
+#pragma pack(push, 1)
 /**
 * tcmalloc ==> Thread-Caching Malloc.
 * thread 별로 malloc 관리.
@@ -19,4 +20,5 @@ public:
 	void					dealloc(void* _p);
 	void					dealloc_array(void* _p);
 };
+#pragma pack(pop)
 }

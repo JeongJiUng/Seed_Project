@@ -1,6 +1,7 @@
 #pragma once
 namespace lev
 {
+#pragma pack(push, 1)
 class cMemoryPool
 {
 public:
@@ -15,4 +16,5 @@ public:
 
 
 };
+#pragma pack(pop)
 }

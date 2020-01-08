@@ -2,6 +2,7 @@
 
 namespace lev
 {
+#pragma pack(push, 1)
 enum SocketType
 {
 	TCP = 0,
@@ -37,4 +38,5 @@ public:
 
 	int						get_fd();
 };
+#pragma pack(pop)
 }

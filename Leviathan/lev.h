@@ -78,3 +78,4 @@ using namespace lev;
 #include "lev_server_adaptor.h"
 
 #include "lev_client.h"
+#include "lev_client_manager.h"

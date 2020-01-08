@@ -1,6 +1,7 @@
 #pragma once
 namespace lev
 {
+#pragma pack(push, 1)
 class cEpoll
 {
 public:
@@ -22,4 +23,5 @@ public:
 	int						get_epoll();
 	int						get_max_event_count();
 };
+#pragma pack(pop)
 }

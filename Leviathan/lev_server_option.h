@@ -1,6 +1,7 @@
 #pragma once
 namespace lev
 {
+#pragma pack(push, 1)
 class cServerOption
 {
 public:
@@ -33,4 +34,5 @@ public:
 	
 	int						get_event_count();
 };
+#pragma pack(pop)
 }

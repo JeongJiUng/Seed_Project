@@ -1,6 +1,7 @@
 #pragma once
 namespace lev
 {
+#pragma pack(push, 1)
 class cEndpoint
 {
 public:
@@ -10,4 +11,5 @@ public:
 	struct sockaddr_in		m_ivp4_endpoint;
 	uint16_t				m_port;
 };
+#pragma pack(pop)
 }

@@ -1,6 +1,7 @@
 #pragma once
 namespace lev
 {
+#pragma pack(push, 1)
 class cServer : public cMultiThreadSync<cServer>, public cThread
 {
 public:
@@ -23,4 +24,5 @@ public:
 
 	cServerOption			get_server_option();
 };
+#pragma pack(pop)
 }

@@ -1,6 +1,7 @@
 #pragma once
 namespace lev
 {
+#pragma pack(push, 1)
 class cMutexLock
 {
 public:
@@ -14,4 +15,5 @@ public:
 	void					lock();
 	void					unlock();
 };
+#pragma pack(pop)
 }

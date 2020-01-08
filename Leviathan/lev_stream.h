@@ -1,6 +1,7 @@
 #pragma once
 namespace lev
 {
+#pragma pack(push, 1)
 class cStream
 {
 public:
@@ -47,6 +48,7 @@ public:
 	cStream*				operator->();
 	operator				cStream*();
 };
+#pragma pack(pop)
 }
 
 #include "lev_stream.inl"

@@ -40,7 +40,7 @@ bool lev::cReceive::receive(int _fd)
 		}
 
 		// 메모리 할당 및 현재 읽어들인 데이터 사이즈 계산.
-		data				= (char*)cAllocator::get_instance()->alloc(data_size);
+		data				= new char[data_size];
 		total_read_size		+= read_size - sizeof(size_t);
 		bzero(data, data_size);
 

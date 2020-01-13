@@ -15,24 +15,41 @@ public:
 	}
 };
 
+long  GetTick()
+{
+	struct timeval tick;
+	gettimeofday(&tick, 0);
+	return (tick.tv_sec*1000 + tick.tv_usec/1000);
+}
+
 int main()
 {
 	cout << "hello World!!" <<endl;
 
-	cTestServer				server;
-	server.run();
-
-	string					input;
-	while (true)
+	
+	srand(time(NULL));
+	long start = GetTick();
+	for (int i = 0; i < 1000000; i++)
 	{
-		cin >> input;
-
-		if (input == "exit")
-		{
-			server.stop();
-			break;
-		}
+		int* test			= new int[rand()];
+		delete[]			test;
 	}
+	cout << GetTick() - start << endl;
 
+	//cTestServer				server;
+	//server.run();
+	//
+	//string					input;
+	//while (true)
+	//{
+	//	cin >> input;
+
+	//	if (input == "exit")
+	//	{
+	//		server.stop();
+	//		break;
+	//	}
+	//}
+	
 	return 0;
 }

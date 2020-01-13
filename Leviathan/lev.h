@@ -59,8 +59,6 @@ using namespace lev;
 #include "lev_thread.h"
 
 #include "lev_memory_pool.h"
-#include "lev_tcmalloc.h"
-#include "lev_allocator.h"
 
 #include "lev_stream.h"
 

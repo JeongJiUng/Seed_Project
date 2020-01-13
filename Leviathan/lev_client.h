@@ -6,6 +6,7 @@ class cClient
 {
 public:
 	cClient();
+	cClient(int _fd, string _ip);
 	virtual ~cClient();
 
 private:

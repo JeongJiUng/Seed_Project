@@ -15,12 +15,7 @@ public:
 	}
 };
 
-long  GetTick()
-{
-	struct timeval tick;
-	gettimeofday(&tick, 0);
-	return (tick.tv_sec*1000 + tick.tv_usec/1000);
-}
+
 
 int main()
 {
@@ -28,13 +23,13 @@ int main()
 
 	
 	srand(time(NULL));
-	long start = GetTick();
+	long start = get_tick();
 	for (int i = 0; i < 1000000; i++)
 	{
 		int* test			= new int[rand()];
 		delete[]			test;
 	}
-	cout << GetTick() - start << endl;
+	cout << get_tick() - start << endl;
 
 	//cTestServer				server;
 	//server.run();

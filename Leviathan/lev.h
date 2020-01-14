@@ -53,6 +53,7 @@ using namespace lev;
 #include "lev_json.h"
 #include "lev_log.h"
 #include "lev_random.h"
+#include "lev_tick.h"
 
 #include "lev_mutex_lock.h"
 #include "lev_multi_thread_sync.h"

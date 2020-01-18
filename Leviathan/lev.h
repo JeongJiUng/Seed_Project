@@ -5,6 +5,8 @@ namespace lev
 constexpr auto				SUCC = 1;
 constexpr auto				FAIL = 0;
 
+constexpr auto				MAX_QUEUE_LENGTH = 500;
+
 constexpr auto				BUFF_SIZE = 64;
 
 constexpr auto				SERVER_OPTION = "/home/leviathan/projects/Leviathan/server_options/server_option.json";
@@ -54,6 +56,8 @@ using namespace lev;
 #include "lev_log.h"
 #include "lev_random.h"
 #include "lev_tick.h"
+#include "lev_circular_queue.h"
+#include "lev_crypt.h"
 
 #include "lev_mutex_lock.h"
 #include "lev_multi_thread_sync.h"
@@ -66,7 +70,6 @@ using namespace lev;
 #include "lev_receive.h"
 #include "lev_send.h"
 
-#include "lev_close_socket.h"
 #include "lev_server_option.h"
 
 #include "lev_endpoint.h"

@@ -20,7 +20,6 @@ public:
 int main()
 {
 	cout << "hello World!!" <<endl;
-
 	
 	srand(time(NULL));
 	long start = get_tick();

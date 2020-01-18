@@ -100,6 +100,21 @@
     <Filter Include="Leviathan\Core\Memory Pool">
       <UniqueIdentifier>{ef352e55-5132-48ee-8951-aeedade2c674}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Leviathan\Utillity\Tick">
+      <UniqueIdentifier>{b2dfea57-07c3-4d06-9b10-1e954af943fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Leviathan\Utillity\Data Structure">
+      <UniqueIdentifier>{c65ea690-2979-4c9e-a3b1-8135cf244d90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Leviathan\Utillity\Data Structure\Queue">
+      <UniqueIdentifier>{6a687a91-af6e-4816-8d19-b8a001dcf8e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Leviathan\Utillity\Crypt">
+      <UniqueIdentifier>{9f11de23-3c1c-4dcc-b643-33ee19605535}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Leviathan\Network\Packet Generator">
+      <UniqueIdentifier>{934a5c53-a485-4884-b589-6aab2eaeb4c4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -158,6 +173,12 @@
     </ClCompile>
     <ClCompile Include="lev_memory_pool.cpp">
       <Filter>Leviathan\Core\Memory Pool</Filter>
+    </ClCompile>
+    <ClCompile Include="lev_tick.cpp">
+      <Filter>Leviathan\Utillity\Tick</Filter>
+    </ClCompile>
+    <ClCompile Include="lev_crypt.cpp">
+      <Filter>Leviathan\Utillity\Crypt</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -260,6 +281,15 @@
     <ClInclude Include="lev_memory_pool.h">
       <Filter>Leviathan\Core\Memory Pool</Filter>
     </ClInclude>
+    <ClInclude Include="lev_tick.h">
+      <Filter>Leviathan\Utillity\Tick</Filter>
+    </ClInclude>
+    <ClInclude Include="lev_circular_queue.h">
+      <Filter>Leviathan\Utillity\Data Structure\Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="lev_crypt.h">
+      <Filter>Leviathan\Utillity\Crypt</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="lev_singleton.inl">
@@ -272,6 +302,9 @@
       <Filter>Leviathan\Core\Stream</Filter>
     </None>
     <None Include="Network.cd" />
+    <None Include="lev_circular_queue.inl">
+      <Filter>Leviathan\Utillity\Data Structure\Queue</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Library Include="libs\libjsoncpp.a">

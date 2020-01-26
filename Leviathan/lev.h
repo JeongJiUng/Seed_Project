@@ -56,12 +56,13 @@ using namespace lev;
 #include "lev_log.h"
 #include "lev_random.h"
 #include "lev_tick.h"
-#include "lev_circular_queue.h"
 #include "lev_crypt.h"
 
 #include "lev_mutex_lock.h"
 #include "lev_multi_thread_sync.h"
 #include "lev_thread.h"
+
+#include "lev_circular_queue.h"
 
 #include "lev_memory_pool.h"
 

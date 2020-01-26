@@ -2,7 +2,7 @@
 namespace lev
 {
 template <class T>
-class cCircularQueue : public cLock<cCircularQueue>
+class cCircularQueue : public cMultiThreadSync<cCircularQueue<T>>
 {
 public:
 	cCircularQueue();

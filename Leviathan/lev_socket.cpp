@@ -29,6 +29,7 @@ lev::cSocket::~cSocket()
 void lev::cSocket::close()
 {
 	// TODO:: gracefull disconnect 구현 필요.
+	cout << "[" << m_fd << "] close socket" << endl;
 	shutdown(m_fd, SHUT_RDWR);
 	::close(m_fd);
 }

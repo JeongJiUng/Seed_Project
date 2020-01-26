@@ -15,35 +15,41 @@ public:
 	}
 };
 
+template <class T>
+class cTest : public cMultiThreadSync<cTest<T>>
+{
+public:
+	cTest()
+	{
+		typename cMultiThreadSync<cTest<T>>::cLock lock;
+	}
+
+	~cTest()
+	{
+
+	}
+};
+
 
 
 int main()
 {
 	cout << "hello World!!" <<endl;
+
+	cTestServer				server;
+	server.run();
 	
-	srand(time(NULL));
-	long start = get_tick();
-	for (int i = 0; i < 1000000; i++)
+	string					input;
+	while (true)
 	{
-		int* test			= new int[rand()];
-		delete[]			test;
+		cin >> input;
+
+		if (input == "exit")
+		{
+			server.stop();
+			break;
+		}
 	}
-	cout << get_tick() - start << endl;
-
-	//cTestServer				server;
-	//server.run();
-	//
-	//string					input;
-	//while (true)
-	//{
-	//	cin >> input;
-
-	//	if (input == "exit")
-	//	{
-	//		server.stop();
-	//		break;
-	//	}
-	//}
 	
 	return 0;
 }

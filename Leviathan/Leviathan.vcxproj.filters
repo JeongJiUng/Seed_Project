@@ -40,9 +40,6 @@
     <Filter Include="Leviathan\Network\LeviathanServer\Server">
       <UniqueIdentifier>{3f9b81da-c0a7-4693-9794-f5eb6c0fe7b0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Leviathan\Network\CloseSocket">
-      <UniqueIdentifier>{2253aa9f-a3b3-4323-904b-888dfa16135a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Leviathan\Network\LeviathanClient">
       <UniqueIdentifier>{9e52ccbd-fa7d-493d-a26a-6a562835b680}</UniqueIdentifier>
     </Filter>
@@ -112,9 +109,6 @@
     <Filter Include="Leviathan\Utillity\Crypt">
       <UniqueIdentifier>{9f11de23-3c1c-4dcc-b643-33ee19605535}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Leviathan\Network\Packet Generator">
-      <UniqueIdentifier>{934a5c53-a485-4884-b589-6aab2eaeb4c4}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -122,9 +116,6 @@
     </ClCompile>
     <ClCompile Include="lev_socket.cpp">
       <Filter>Leviathan\Network\Socket</Filter>
-    </ClCompile>
-    <ClCompile Include="lev_close_socket.cpp">
-      <Filter>Leviathan\Network\CloseSocket</Filter>
     </ClCompile>
     <ClCompile Include="lev_json.cpp">
       <Filter>Leviathan\Utillity\Json</Filter>
@@ -190,9 +181,6 @@
     </ClInclude>
     <ClInclude Include="lev_singleton.h">
       <Filter>Leviathan\Utillity\DesignPattern\Singleton</Filter>
-    </ClInclude>
-    <ClInclude Include="lev_close_socket.h">
-      <Filter>Leviathan\Network\CloseSocket</Filter>
     </ClInclude>
     <ClInclude Include="include\jsoncpp\allocator.h">
       <Filter>Leviathan\OpenSource\Jsoncpp</Filter>

@@ -13,7 +13,7 @@ namespace lev
 	template<class T>
 	inline bool cCircularQueue<T>::push(T _data)
 	{
-		cLock				lock;
+		typename cMultiThreadSync<cCircularQueue<T>>::cLock	lock;
 
 		int					temp_tail = (m_queue_tail + 1) % MAX_QUEUE_LENGTH;
 
@@ -30,14 +30,14 @@ namespace lev
 	template<class T>
 	inline bool cCircularQueue<T>::pop(T& _data)
 	{
-		cLock				lock;
+		typename cMultiThreadSync<cCircularQueue<T>>::cLock	lock;
 
 		if (m_queue_head == m_queue_tail)
 			return FAIL;
 
 		int					temp_head = (m_queue_head + 1) % MAX_QUEUE_LENGTH;
 
-		memcpy(&data, &m_queue[temp_head], sizeof(T));
+		memcpy(&_data, &m_queue[temp_head], sizeof(T));
 
 		m_queue_head		= temp_head;
 
@@ -47,7 +47,7 @@ namespace lev
 	template<class T>
 	inline bool cCircularQueue<T>::isEmpty()
 	{
-		cLock				lock;
+		typename cMultiThreadSync<cCircularQueue<T>>::cLock	lock;
 
 		if (m_queue_head == m_queue_tail)
 			return true;

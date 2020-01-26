@@ -135,7 +135,6 @@
     <ClCompile Include="lev_memory_pool.cpp" />
     <ClCompile Include="lev_client.cpp" />
     <ClCompile Include="lev_client_manager.cpp" />
-    <ClCompile Include="lev_close_socket.cpp" />
     <ClCompile Include="lev_endpoint.cpp" />
     <ClCompile Include="lev_epoll.cpp" />
     <ClCompile Include="lev_json.cpp" />
@@ -172,7 +171,6 @@
     <ClInclude Include="lev_memory_pool.h" />
     <ClInclude Include="lev_client.h" />
     <ClInclude Include="lev_client_manager.h" />
-    <ClInclude Include="lev_close_socket.h" />
     <ClInclude Include="lev_endpoint.h" />
     <ClInclude Include="lev_epoll.h" />
     <ClInclude Include="lev_json.h" />

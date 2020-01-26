@@ -1,10 +1,10 @@
 #include "lev.h"
 
-lev::cClient::cClient() : m_message(NULL), m_ip(""), m_fd(0)
+lev::cClient::cClient() : cSocket(-1, ""), m_heart_beat(true), m_message(NULL)
 {
 }
 
-lev::cClient::cClient(int _fd, string _ip) : m_message(NULL), m_ip(_ip), m_fd(_fd)
+lev::cClient::cClient(int _fd, string _ip) : cSocket(_fd, _ip), m_heart_beat(true), m_message(NULL)
 {
 }
 
@@ -12,8 +12,9 @@ lev::cClient::~cClient()
 {
 }
 
-void lev::cClient::set_client(int _fd, string _ip)
+void lev::cClient::set_client(bool _heart_beat, int _fd, string _ip)
 {
+	m_heart_beat			= _heart_beat;
 	m_fd					= _fd;
 	m_ip					= _ip;
 }

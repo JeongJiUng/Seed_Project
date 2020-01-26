@@ -20,17 +20,20 @@ class cSocket
 public:
 	cSocket();
 	cSocket(int _fd);
+	cSocket(int _fd, string _ip);
 	cSocket(SocketType _type);
 	virtual ~cSocket();
 
-private:
+protected:
 	int						m_fd;
+	string					m_ip;
 
 public:
 	void					close();
 	void					bind(const cEndpoint& _endpoint);
 	void					listen(int _back_log);
 	bool					accept(SOCKET_INFO& _accepted_socket);
+	bool					accept(int _listen_socket);
 	void					connect(const cEndpoint& _endpoint);
 
 	void					set_fd(int _fd);

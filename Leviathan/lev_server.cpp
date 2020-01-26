@@ -62,15 +62,7 @@ void* lev::cServer::proc_listen()
 			
 			if (event.data.fd == listen_socket.get_fd())
 			{
-				// TODO:: 클라이언트 커넥트
-				SOCKET_INFO	clt;
-				while (true)
-				{
-					if (listen_socket.accept(clt) == FAIL)
-					{
-						break;
-					}
-				}
+				cClientManager::get_instance()->begin(m_option.get_connection_count(), listen_socket.get_fd());
 			}
 		}
 	}

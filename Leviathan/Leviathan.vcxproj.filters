@@ -109,6 +109,9 @@
     <Filter Include="Leviathan\Utillity\Crypt">
       <UniqueIdentifier>{9f11de23-3c1c-4dcc-b643-33ee19605535}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Leviathan\Network\LeviathanServer\Heart Beat">
+      <UniqueIdentifier>{25ad8a3b-5583-46c7-8bee-13671a7e2a74}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -170,6 +173,9 @@
     </ClCompile>
     <ClCompile Include="lev_crypt.cpp">
       <Filter>Leviathan\Utillity\Crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="lev_heart_beat.cpp">
+      <Filter>Leviathan\Network\LeviathanServer\Heart Beat</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -277,6 +283,9 @@
     </ClInclude>
     <ClInclude Include="lev_crypt.h">
       <Filter>Leviathan\Utillity\Crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="lev_heart_beat.h">
+      <Filter>Leviathan\Network\LeviathanServer\Heart Beat</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

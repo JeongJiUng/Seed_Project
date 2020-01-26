@@ -78,6 +78,8 @@ using namespace lev;
 #include "lev_epoll.h"
 #include "lev_server.h"
 
+#include "lev_heart_beat.h"
+
 #include "lev_server_adaptor.h"
 
 #include "lev_client.h"

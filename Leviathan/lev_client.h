@@ -2,7 +2,7 @@
 namespace lev
 {
 #pragma pack(push, 1)
-class cClient
+class cClient : public cSocket
 {
 public:
 	cClient();
@@ -10,14 +10,14 @@ public:
 	virtual ~cClient();
 
 private:
+	bool					m_heart_beat;
 	char*					m_message;
 
-	string					m_ip;
-	int						m_fd;
-
 public:
-	void					set_client(int _fd, string _ip);
+	void					set_client(bool _keep_alive, int _fd, string _ip);
 	void					set_message(char* _message);
+
+	bool					get_heart_beat();
 };
 #pragma pack(pop)
 }

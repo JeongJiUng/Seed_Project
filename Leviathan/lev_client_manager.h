@@ -9,9 +9,10 @@ public:
 	virtual ~cClientManager();
 
 private:
-	unordered_map<int, cClient>	m_clts;
+	vector<cClient*>		m_clts;
 
 public:
+	void					begin(int _max_clt_count, int _listen_socket);
 	void					insert(SOCKET_INFO _clt);
 };
 #pragma pack(pop)

@@ -1,13 +1,15 @@
 #include "lev.h"
 
-lev::cSocket::cSocket()
+lev::cSocket::cSocket() : m_fd(-1), m_ip("")
 {
-	m_fd					= -1;
 }
 
-lev::cSocket::cSocket(int _fd)
+lev::cSocket::cSocket(int _fd) : m_fd(_fd), m_ip("")
 {
-	m_fd					= _fd;
+}
+
+lev::cSocket::cSocket(int _fd, string _ip) : m_fd(_fd), m_ip(_ip)
+{
 }
 
 lev::cSocket::cSocket(SocketType _type)
@@ -66,6 +68,23 @@ bool lev::cSocket::accept(SOCKET_INFO& _accepted_socket)
 	}
 
 	_accepted_socket.ip		= inet_ntoa(ipv4_endpoint.sin_addr);
+
+	return SUCC;
+}
+
+bool lev::cSocket::accept(int _listen_socket)
+{
+	struct sockaddr_in		ipv4_endpoint;
+	int						ipv4_endpoint_len = sizeof(ipv4_endpoint);
+
+	m_fd					= ::accept(_listen_socket, (struct sockaddr*)&ipv4_endpoint, (socklen_t*)&ipv4_endpoint_len);
+	if (m_fd < 0)
+	{
+		cLog::get_instance()->write("LEV_ERROR", "[ACCEPT] FAIL, ERROR CODE [%d]\n", m_fd);
+		return FAIL;
+	}
+
+	m_ip					= inet_ntoa(ipv4_endpoint.sin_addr);
 
 	return SUCC;
 }

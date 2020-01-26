@@ -132,6 +132,7 @@
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
     <ClCompile Include="lev_crypt.cpp" />
+    <ClCompile Include="lev_heart_beat.cpp" />
     <ClCompile Include="lev_memory_pool.cpp" />
     <ClCompile Include="lev_client.cpp" />
     <ClCompile Include="lev_client_manager.cpp" />
@@ -168,6 +169,7 @@
     <ClInclude Include="lev.h" />
     <ClInclude Include="lev_circular_queue.h" />
     <ClInclude Include="lev_crypt.h" />
+    <ClInclude Include="lev_heart_beat.h" />
     <ClInclude Include="lev_memory_pool.h" />
     <ClInclude Include="lev_client.h" />
     <ClInclude Include="lev_client_manager.h" />

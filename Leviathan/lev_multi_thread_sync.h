@@ -1,6 +1,7 @@
 #pragma once
 namespace lev
 {
+#pragma pack(push, 1)
 template <class T>
 class cMultiThreadSync
 {
@@ -17,6 +18,7 @@ public:
 private:
 	static cMutexLock			m_mutex;
 };
+#pragma pack(pop)
 
 template <class T>
 inline cMultiThreadSync<T>::cLock::cLock()

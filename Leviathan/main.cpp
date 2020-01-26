@@ -13,21 +13,32 @@ public:
 	virtual ~cTestServer()
 	{
 	}
+};
 
+template <class T>
+class cTest : public cMultiThreadSync<cTest<T>>
+{
 public:
-	void server_data_save()
+	cTest()
+	{
+		typename cMultiThreadSync<cTest<T>>::cLock lock;
+	}
+
+	~cTest()
 	{
 
 	}
 };
 
+
+
 int main()
 {
 	cout << "hello World!!" <<endl;
 
-	cLeviathanServer		lev_server(new cTestServer);
-	lev_server.run();
-
+	cTestServer				server;
+	server.run();
+	
 	string					input;
 	while (true)
 	{
@@ -35,9 +46,10 @@ int main()
 
 		if (input == "exit")
 		{
+			server.stop();
 			break;
 		}
 	}
-
+	
 	return 0;
 }

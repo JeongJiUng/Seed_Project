@@ -1,6 +1,7 @@
 #pragma once
 namespace lev
 {
+#pragma pack(push, 1)
 class cThread
 {
 public:
@@ -18,4 +19,5 @@ public:
 protected:
 	bool					create_thread(void *_function(void* arg), void* context);
 };
+#pragma pack(pop)
 }

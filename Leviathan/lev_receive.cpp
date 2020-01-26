@@ -40,7 +40,7 @@ bool lev::cReceive::receive(int _fd)
 		}
 
 		// 메모리 할당 및 현재 읽어들인 데이터 사이즈 계산.
-		data				= (char*)cAllocator::get_instance()->alloc(data_size);
+		data				= new char[data_size];
 		total_read_size		+= read_size - sizeof(size_t);
 		bzero(data, data_size);
 
@@ -57,20 +57,20 @@ bool lev::cReceive::receive(int _fd)
 		return SUCC;
 	}
 
-	// 총 읽은 패킷 사이즈의 크기가 패킷의 전체 사이즈보다 작으면 아직 읽을 내용이 더 있다는 뜻으로 반복해서 read함수 호출.
-	while (total_read_size < data_size)
-	{
-		error				= (int)aio_read64(&aio);
-		if (error < 0)
-			return FAIL;
+	//// 총 읽은 패킷 사이즈의 크기가 패킷의 전체 사이즈보다 작으면 아직 읽을 내용이 더 있다는 뜻으로 반복해서 read함수 호출.
+	//while (total_read_size < data_size)
+	//{
+	//	error				= (int)aio_read64(&aio);
+	//	if (error < 0)
+	//		return FAIL;
 
-		if (aio_return64(&aio) <= 0)
-			return FAIL;
+	//	if (aio_return64(&aio) <= 0)
+	//		return FAIL;
 
-		read_size			= aio_return64(&aio);
-		total_read_size		+= read_size;
-		stream.write(packet.m_packet, read_size);
-	}
+	//	read_size			= aio_return64(&aio);
+	//	total_read_size		+= read_size;
+	//	stream.write(packet.m_packet, read_size);
+	//}
 
 	// 리시브 큐에 data push.
 

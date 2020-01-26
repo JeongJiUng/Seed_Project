@@ -1,23 +1,28 @@
 #pragma once
 namespace lev
 {
-class cServer : public cSocket, public cBind, public cListen, public cAccept, public cMultiThreadSync<cServer>, public cThread
+#pragma pack(push, 1)
+class cServer : public cMultiThreadSync<cServer>, public cThread
 {
 public:
 	cServer();
 	virtual ~cServer();
 
 protected:
-	int						m_fd;
+	bool					m_working;
 	cServerOption			m_option;
 
-public:
-	virtual void			start();
-	virtual void*			loop();
-	virtual void			shutdown();
+protected:
+	static void*			create_thread_helper(void* arg);
+	
+	virtual void*			proc_listen();
+	virtual void			proc_shutdown();
 
-	void					set_fd(int _fd);
-	int						get_fd();
+public:
+	void					run();
+	void					stop();
+
 	cServerOption			get_server_option();
 };
+#pragma pack(pop)
 }

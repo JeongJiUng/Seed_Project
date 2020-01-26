@@ -37,35 +37,8 @@
     <Filter Include="Leviathan\Network\LeviathanServer\Adaptor">
       <UniqueIdentifier>{fbbf3581-54ce-434e-98a0-fd6933bfa6f5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Leviathan\Network\LeviathanServer\EpollServer">
-      <UniqueIdentifier>{529c01ec-96d2-4010-8f56-46cfef58f18f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Leviathan\Network\LeviathanServer\EpollServer\EpollCreate">
-      <UniqueIdentifier>{4961380c-243c-4a79-99dc-0f5acbe7243b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Leviathan\Network\LeviathanServer\EpollServer\EpollCTL">
-      <UniqueIdentifier>{a9411c75-39da-47e7-985e-bd75767ba9b8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Leviathan\Network\LeviathanServer\EpollServer\EpollWait">
-      <UniqueIdentifier>{99c6a229-906c-42af-a044-fa2aea17070a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Leviathan\Network\LeviathanServer\EpollServer\Epoll">
-      <UniqueIdentifier>{bc645466-bda3-43cb-a198-58b7138ba417}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Leviathan\Network\LeviathanServer\Server">
       <UniqueIdentifier>{3f9b81da-c0a7-4693-9794-f5eb6c0fe7b0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Leviathan\Network\LeviathanServer\Server\Bind">
-      <UniqueIdentifier>{abc73863-ee13-487a-af6d-caad21549e43}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Leviathan\Network\LeviathanServer\Server\Listen">
-      <UniqueIdentifier>{8d002f56-7a36-48dd-bd22-98f8eef78c72}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Leviathan\Network\LeviathanServer\Server\Accept">
-      <UniqueIdentifier>{122ab90c-9b35-4c34-b654-f3f4044c2037}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Leviathan\Network\CloseSocket">
-      <UniqueIdentifier>{2253aa9f-a3b3-4323-904b-888dfa16135a}</UniqueIdentifier>
     </Filter>
     <Filter Include="Leviathan\Network\LeviathanClient">
       <UniqueIdentifier>{9e52ccbd-fa7d-493d-a26a-6a562835b680}</UniqueIdentifier>
@@ -73,14 +46,8 @@
     <Filter Include="Leviathan\Network\LeviathanClient\Client">
       <UniqueIdentifier>{2953f507-eadb-4b37-a582-de739192b328}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Leviathan\Network\LeviathanServer\Server\Socket">
-      <UniqueIdentifier>{866a2b5b-a695-4097-b35e-f342acc2747e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Leviathan\Utillity\Log">
       <UniqueIdentifier>{e52b9f5c-bf34-4d80-8689-73eb829fa5f7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Leviathan\Network\ServerOption">
-      <UniqueIdentifier>{098fbad9-640c-4659-80fd-af7269993a70}</UniqueIdentifier>
     </Filter>
     <Filter Include="Leviathan\Network\LeviathanClient\ClientManager">
       <UniqueIdentifier>{78c8fa09-8ba5-4ef1-9700-01ea2a4d850c}</UniqueIdentifier>
@@ -90,18 +57,6 @@
     </Filter>
     <Filter Include="Leviathan\Core\Stream">
       <UniqueIdentifier>{e2851da0-bb08-4b63-a5ad-e1b37cecb301}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Leviathan\Core\Memory">
-      <UniqueIdentifier>{db957187-0b67-4293-84cc-3bba08a25fd2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Leviathan\Core\Memory\TCMalloc">
-      <UniqueIdentifier>{a024e460-3781-4bff-b738-a61cee23f82b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Leviathan\Core\Memory\Allocator">
-      <UniqueIdentifier>{a740bcba-3393-450a-9ee3-027b69893521}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Leviathan\Core\Memory\Memory Pool">
-      <UniqueIdentifier>{ef352e55-5132-48ee-8951-aeedade2c674}</UniqueIdentifier>
     </Filter>
     <Filter Include="Leviathan\Core\Thread">
       <UniqueIdentifier>{6592e22d-3d0f-4120-a120-58daf04c6d74}</UniqueIdentifier>
@@ -127,52 +82,49 @@
     <Filter Include="Leviathan\Core\I/O\Send">
       <UniqueIdentifier>{c4aadb05-c1ba-45a9-8eaa-2ab83a3bb678}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Leviathan\Network\LeviathanServer\Server\EndPoint">
+      <UniqueIdentifier>{a1756a73-8628-4d7c-aa7f-a7cb4db5f330}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Leviathan\Network\LeviathanServer\Server\Epoll">
+      <UniqueIdentifier>{a44ec871-e5fe-4655-892f-a36b185b7f59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Leviathan\Network\LeviathanServer\ServerOption">
+      <UniqueIdentifier>{098fbad9-640c-4659-80fd-af7269993a70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Leviathan\Network\Socket">
+      <UniqueIdentifier>{866a2b5b-a695-4097-b35e-f342acc2747e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Leviathan\Core\Memory Pool">
+      <UniqueIdentifier>{ef352e55-5132-48ee-8951-aeedade2c674}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Leviathan\Utillity\Tick">
+      <UniqueIdentifier>{b2dfea57-07c3-4d06-9b10-1e954af943fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Leviathan\Utillity\Data Structure">
+      <UniqueIdentifier>{c65ea690-2979-4c9e-a3b1-8135cf244d90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Leviathan\Utillity\Data Structure\Queue">
+      <UniqueIdentifier>{6a687a91-af6e-4816-8d19-b8a001dcf8e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Leviathan\Utillity\Crypt">
+      <UniqueIdentifier>{9f11de23-3c1c-4dcc-b643-33ee19605535}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Leviathan</Filter>
     </ClCompile>
     <ClCompile Include="lev_socket.cpp">
-      <Filter>Leviathan\Network\LeviathanServer\Server\Socket</Filter>
-    </ClCompile>
-    <ClCompile Include="lev_bind.cpp">
-      <Filter>Leviathan\Network\LeviathanServer\Server\Bind</Filter>
-    </ClCompile>
-    <ClCompile Include="lev_listen.cpp">
-      <Filter>Leviathan\Network\LeviathanServer\Server\Listen</Filter>
-    </ClCompile>
-    <ClCompile Include="lev_close_socket.cpp">
-      <Filter>Leviathan\Network\CloseSocket</Filter>
+      <Filter>Leviathan\Network\Socket</Filter>
     </ClCompile>
     <ClCompile Include="lev_json.cpp">
       <Filter>Leviathan\Utillity\Json</Filter>
-    </ClCompile>
-    <ClCompile Include="lev_accept.cpp">
-      <Filter>Leviathan\Network\LeviathanServer\Server\Accept</Filter>
-    </ClCompile>
-    <ClCompile Include="lev_epoll.cpp">
-      <Filter>Leviathan\Network\LeviathanServer\EpollServer\Epoll</Filter>
-    </ClCompile>
-    <ClCompile Include="lev_epoll_wait.cpp">
-      <Filter>Leviathan\Network\LeviathanServer\EpollServer\EpollWait</Filter>
-    </ClCompile>
-    <ClCompile Include="lev_epoll_ctl.cpp">
-      <Filter>Leviathan\Network\LeviathanServer\EpollServer\EpollCTL</Filter>
-    </ClCompile>
-    <ClCompile Include="lev_epoll_create.cpp">
-      <Filter>Leviathan\Network\LeviathanServer\EpollServer\EpollCreate</Filter>
-    </ClCompile>
-    <ClCompile Include="lev_epoll_server.cpp">
-      <Filter>Leviathan\Network\LeviathanServer\EpollServer</Filter>
     </ClCompile>
     <ClCompile Include="lev_server_adaptor.cpp">
       <Filter>Leviathan\Network\LeviathanServer\Adaptor</Filter>
     </ClCompile>
     <ClCompile Include="lev_server.cpp">
       <Filter>Leviathan\Network\LeviathanServer\Server</Filter>
-    </ClCompile>
-    <ClCompile Include="lev_leviathan_server.cpp">
-      <Filter>Leviathan\Network\LeviathanServer</Filter>
     </ClCompile>
     <ClCompile Include="lev_client.cpp">
       <Filter>Leviathan\Network\LeviathanClient\Client</Filter>
@@ -181,16 +133,7 @@
       <Filter>Leviathan\Utillity\Log</Filter>
     </ClCompile>
     <ClCompile Include="lev_server_option.cpp">
-      <Filter>Leviathan\Network\ServerOption</Filter>
-    </ClCompile>
-    <ClCompile Include="lev_tcmalloc.cpp">
-      <Filter>Leviathan\Core\Memory\TCMalloc</Filter>
-    </ClCompile>
-    <ClCompile Include="lev_memory_pool.cpp">
-      <Filter>Leviathan\Core\Memory\Memory Pool</Filter>
-    </ClCompile>
-    <ClCompile Include="lev_allocator.cpp">
-      <Filter>Leviathan\Core\Memory\Allocator</Filter>
+      <Filter>Leviathan\Network\LeviathanServer\ServerOption</Filter>
     </ClCompile>
     <ClCompile Include="lev_stream.cpp">
       <Filter>Leviathan\Core\Stream</Filter>
@@ -210,25 +153,34 @@
     <ClCompile Include="lev_send.cpp">
       <Filter>Leviathan\Core\I/O\Send</Filter>
     </ClCompile>
+    <ClCompile Include="lev_endpoint.cpp">
+      <Filter>Leviathan\Network\LeviathanServer\Server\EndPoint</Filter>
+    </ClCompile>
+    <ClCompile Include="lev_epoll.cpp">
+      <Filter>Leviathan\Network\LeviathanServer\Server\Epoll</Filter>
+    </ClCompile>
+    <ClCompile Include="lev_client_manager.cpp">
+      <Filter>Leviathan\Network\LeviathanClient\ClientManager</Filter>
+    </ClCompile>
+    <ClCompile Include="lev_memory_pool.cpp">
+      <Filter>Leviathan\Core\Memory Pool</Filter>
+    </ClCompile>
+    <ClCompile Include="lev_tick.cpp">
+      <Filter>Leviathan\Utillity\Tick</Filter>
+    </ClCompile>
+    <ClCompile Include="lev_crypt.cpp">
+      <Filter>Leviathan\Utillity\Crypt</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lev.h">
       <Filter>Leviathan</Filter>
     </ClInclude>
     <ClInclude Include="lev_socket.h">
-      <Filter>Leviathan\Network\LeviathanServer\Server\Socket</Filter>
-    </ClInclude>
-    <ClInclude Include="lev_bind.h">
-      <Filter>Leviathan\Network\LeviathanServer\Server\Bind</Filter>
-    </ClInclude>
-    <ClInclude Include="lev_listen.h">
-      <Filter>Leviathan\Network\LeviathanServer\Server\Listen</Filter>
+      <Filter>Leviathan\Network\Socket</Filter>
     </ClInclude>
     <ClInclude Include="lev_singleton.h">
       <Filter>Leviathan\Utillity\DesignPattern\Singleton</Filter>
-    </ClInclude>
-    <ClInclude Include="lev_close_socket.h">
-      <Filter>Leviathan\Network\CloseSocket</Filter>
     </ClInclude>
     <ClInclude Include="include\jsoncpp\allocator.h">
       <Filter>Leviathan\OpenSource\Jsoncpp</Filter>
@@ -269,32 +221,11 @@
     <ClInclude Include="lev_json.h">
       <Filter>Leviathan\Utillity\Json</Filter>
     </ClInclude>
-    <ClInclude Include="lev_accept.h">
-      <Filter>Leviathan\Network\LeviathanServer\Server\Accept</Filter>
-    </ClInclude>
-    <ClInclude Include="lev_epoll.h">
-      <Filter>Leviathan\Network\LeviathanServer\EpollServer\Epoll</Filter>
-    </ClInclude>
-    <ClInclude Include="lev_epoll_wait.h">
-      <Filter>Leviathan\Network\LeviathanServer\EpollServer\EpollWait</Filter>
-    </ClInclude>
-    <ClInclude Include="lev_epoll_ctl.h">
-      <Filter>Leviathan\Network\LeviathanServer\EpollServer\EpollCTL</Filter>
-    </ClInclude>
-    <ClInclude Include="lev_epoll_create.h">
-      <Filter>Leviathan\Network\LeviathanServer\EpollServer\EpollCreate</Filter>
-    </ClInclude>
-    <ClInclude Include="lev_epoll_server.h">
-      <Filter>Leviathan\Network\LeviathanServer\EpollServer</Filter>
-    </ClInclude>
     <ClInclude Include="lev_server_adaptor.h">
       <Filter>Leviathan\Network\LeviathanServer\Adaptor</Filter>
     </ClInclude>
     <ClInclude Include="lev_server.h">
       <Filter>Leviathan\Network\LeviathanServer\Server</Filter>
-    </ClInclude>
-    <ClInclude Include="lev_leviathan_server.h">
-      <Filter>Leviathan\Network\LeviathanServer</Filter>
     </ClInclude>
     <ClInclude Include="lev_client.h">
       <Filter>Leviathan\Network\LeviathanClient\Client</Filter>
@@ -303,16 +234,7 @@
       <Filter>Leviathan\Utillity\Log</Filter>
     </ClInclude>
     <ClInclude Include="lev_server_option.h">
-      <Filter>Leviathan\Network\ServerOption</Filter>
-    </ClInclude>
-    <ClInclude Include="lev_tcmalloc.h">
-      <Filter>Leviathan\Core\Memory\TCMalloc</Filter>
-    </ClInclude>
-    <ClInclude Include="lev_memory_pool.h">
-      <Filter>Leviathan\Core\Memory\Memory Pool</Filter>
-    </ClInclude>
-    <ClInclude Include="lev_allocator.h">
-      <Filter>Leviathan\Core\Memory\Allocator</Filter>
+      <Filter>Leviathan\Network\LeviathanServer\ServerOption</Filter>
     </ClInclude>
     <ClInclude Include="lev_stream.h">
       <Filter>Leviathan\Core\Stream</Filter>
@@ -335,24 +257,48 @@
     <ClInclude Include="lev_send.h">
       <Filter>Leviathan\Core\I/O\Send</Filter>
     </ClInclude>
+    <ClInclude Include="lev_endpoint.h">
+      <Filter>Leviathan\Network\LeviathanServer\Server\EndPoint</Filter>
+    </ClInclude>
+    <ClInclude Include="lev_epoll.h">
+      <Filter>Leviathan\Network\LeviathanServer\Server\Epoll</Filter>
+    </ClInclude>
+    <ClInclude Include="lev_client_manager.h">
+      <Filter>Leviathan\Network\LeviathanClient\ClientManager</Filter>
+    </ClInclude>
+    <ClInclude Include="lev_memory_pool.h">
+      <Filter>Leviathan\Core\Memory Pool</Filter>
+    </ClInclude>
+    <ClInclude Include="lev_tick.h">
+      <Filter>Leviathan\Utillity\Tick</Filter>
+    </ClInclude>
+    <ClInclude Include="lev_circular_queue.h">
+      <Filter>Leviathan\Utillity\Data Structure\Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="lev_crypt.h">
+      <Filter>Leviathan\Utillity\Crypt</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="lev_singleton.inl">
       <Filter>Leviathan\Utillity\DesignPattern\Singleton</Filter>
     </None>
     <None Include="server_options\server_option.json">
-      <Filter>Leviathan\Network\ServerOption</Filter>
+      <Filter>Leviathan\Network\LeviathanServer\ServerOption</Filter>
     </None>
     <None Include="lev_stream.inl">
       <Filter>Leviathan\Core\Stream</Filter>
     </None>
     <None Include="Network.cd" />
+    <None Include="lev_circular_queue.inl">
+      <Filter>Leviathan\Utillity\Data Structure\Queue</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="libs\libtcmalloc.a">
+    <Library Include="libs\libjsoncpp.a">
       <Filter>Leviathan\Libs</Filter>
     </Library>
-    <Library Include="libs\libjsoncpp.a">
+    <Library Include="libs\libtcmalloc.a">
       <Filter>Leviathan\Libs</Filter>
     </Library>
   </ItemGroup>

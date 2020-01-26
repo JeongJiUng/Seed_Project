@@ -131,21 +131,14 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
-    <ClCompile Include="lev_accept.cpp" />
-    <ClCompile Include="lev_allocator.cpp" />
-    <ClCompile Include="lev_bind.cpp" />
-    <ClCompile Include="lev_client.cpp" />
-    <ClCompile Include="lev_close_socket.cpp" />
-    <ClCompile Include="lev_epoll.cpp" />
-    <ClCompile Include="lev_epoll_create.cpp" />
-    <ClCompile Include="lev_epoll_ctl.cpp" />
-    <ClCompile Include="lev_epoll_server.cpp" />
-    <ClCompile Include="lev_epoll_wait.cpp" />
-    <ClCompile Include="lev_json.cpp" />
-    <ClCompile Include="lev_leviathan_server.cpp" />
-    <ClCompile Include="lev_listen.cpp" />
-    <ClCompile Include="lev_log.cpp" />
+    <ClCompile Include="lev_crypt.cpp" />
     <ClCompile Include="lev_memory_pool.cpp" />
+    <ClCompile Include="lev_client.cpp" />
+    <ClCompile Include="lev_client_manager.cpp" />
+    <ClCompile Include="lev_endpoint.cpp" />
+    <ClCompile Include="lev_epoll.cpp" />
+    <ClCompile Include="lev_json.cpp" />
+    <ClCompile Include="lev_log.cpp" />
     <ClCompile Include="lev_mutex_lock.cpp" />
     <ClCompile Include="lev_random.cpp" />
     <ClCompile Include="lev_receive.cpp" />
@@ -155,8 +148,8 @@
     <ClCompile Include="lev_server_option.cpp" />
     <ClCompile Include="lev_socket.cpp" />
     <ClCompile Include="lev_stream.cpp" />
-    <ClCompile Include="lev_tcmalloc.cpp" />
     <ClCompile Include="lev_thread.cpp" />
+    <ClCompile Include="lev_tick.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -173,21 +166,15 @@
     <ClInclude Include="include\jsoncpp\writer.h" />
     <ClInclude Include="include\tcmalloc.h" />
     <ClInclude Include="lev.h" />
-    <ClInclude Include="lev_accept.h" />
-    <ClInclude Include="lev_allocator.h" />
-    <ClInclude Include="lev_bind.h" />
-    <ClInclude Include="lev_client.h" />
-    <ClInclude Include="lev_close_socket.h" />
-    <ClInclude Include="lev_epoll.h" />
-    <ClInclude Include="lev_epoll_create.h" />
-    <ClInclude Include="lev_epoll_ctl.h" />
-    <ClInclude Include="lev_epoll_server.h" />
-    <ClInclude Include="lev_epoll_wait.h" />
-    <ClInclude Include="lev_json.h" />
-    <ClInclude Include="lev_leviathan_server.h" />
-    <ClInclude Include="lev_listen.h" />
-    <ClInclude Include="lev_log.h" />
+    <ClInclude Include="lev_circular_queue.h" />
+    <ClInclude Include="lev_crypt.h" />
     <ClInclude Include="lev_memory_pool.h" />
+    <ClInclude Include="lev_client.h" />
+    <ClInclude Include="lev_client_manager.h" />
+    <ClInclude Include="lev_endpoint.h" />
+    <ClInclude Include="lev_epoll.h" />
+    <ClInclude Include="lev_json.h" />
+    <ClInclude Include="lev_log.h" />
     <ClInclude Include="lev_mutex_lock.h" />
     <ClInclude Include="lev_random.h" />
     <ClInclude Include="lev_receive.h" />
@@ -198,11 +185,12 @@
     <ClInclude Include="lev_singleton.h" />
     <ClInclude Include="lev_socket.h" />
     <ClInclude Include="lev_stream.h" />
-    <ClInclude Include="lev_tcmalloc.h" />
     <ClInclude Include="lev_multi_thread_sync.h" />
     <ClInclude Include="lev_thread.h" />
+    <ClInclude Include="lev_tick.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="lev_circular_queue.inl" />
     <None Include="Network.cd" />
     <None Include="lev_singleton.inl" />
     <None Include="lev_stream.inl" />
@@ -210,7 +198,24 @@
   </ItemGroup>
   <ItemGroup>
     <Library Include="libs\libjsoncpp.a" />
-    <Library Include="libs\libtcmalloc.a" />
+    <Library Include="libs\libtcmalloc.a">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug_Server|ARM64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_Server|ARM64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug_Client|ARM64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_Client|ARM64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug_Server|ARM'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_Server|ARM'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug_Client|ARM'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_Client|ARM'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug_Server|x86'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_Server|x86'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug_Client|x86'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_Client|x86'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug_Server|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_Server|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug_Client|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_Client|x64'">false</ExcludedFromBuild>
+    </Library>
   </ItemGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Server|x64'">
     <Link>
